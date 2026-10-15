@@ -104,8 +104,8 @@
   if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
     document.querySelectorAll(".nav details").forEach(function (d) {
       var t;
-      d.addEventListener("mouseenter", function () { clearTimeout(t); if (window.innerWidth > 860) d.setAttribute("open", ""); });
-      d.addEventListener("mouseleave", function () { t = setTimeout(function () { if (window.innerWidth > 860) d.removeAttribute("open"); }, 200); });
+      d.addEventListener("mouseenter", function () { clearTimeout(t); if (window.innerWidth > 980) d.setAttribute("open", ""); });
+      d.addEventListener("mouseleave", function () { t = setTimeout(function () { if (window.innerWidth > 980) d.removeAttribute("open"); }, 200); });
     });
   }
 
