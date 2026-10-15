@@ -304,3 +304,9 @@ main .wrap > h2[id]:first-child, main .wrap > .text:first-child > h2[id]:first-c
 @media (max-width: 520px) { .card.person { flex-direction: column; align-items: flex-start; } }
 .chips { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
 .chips li { font: 500 14.5px/1 var(--ui); background: var(--navy-soft); color: var(--ink); border-radius: 999px; padding: 9px 14px; }
+
+/* ---------- Σελίδα «Δημιουργίες»: το κουτί «Έχετε μια ιδέα;» με το χρυσό ερωτηματικό ---------- */
+.card.idea { border: 1.5px dashed color-mix(in srgb, var(--gold-bright) 75%, var(--line)); background: var(--navy-soft); box-shadow: none; overflow: hidden; }
+.card.idea .idea-mark { position: absolute; right: 18px; top: 6px; font: 400 92px/1 var(--display); color: var(--gold-bright); opacity: .55; pointer-events: none; }
+.card.idea h3, .card.idea .meta, .card.idea p { position: relative; }
+.cards.apps.two-up:has(.idea) { max-width: 1120px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
