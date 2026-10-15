@@ -98,7 +98,11 @@
       '<div class="lang">' + langHTML() + "</div></div>";
   }
   var foot = document.getElementById("site-footer");
-  if (foot) { foot.className = "site-footer"; foot.innerHTML = '<div class="wrap"><span>' + FOOTER[LANG] + "</span></div>"; }
+  // Δεξιά στο υποσέλιδο: σύνδεσμος στην «Πολιτική δήλωση» (ενότητα στη σελίδα Σχετικά / About)
+  var STATEMENT = LANG === "el"
+    ? '<a href="' + ROOT + 'sxetika/#politiki-dilosi">Πολιτική δήλωση</a>'
+    : '<a href="' + ROOT + 'en/about/#political-statement">Political statement</a>';
+  if (foot) { foot.className = "site-footer"; foot.innerHTML = '<div class="wrap"><span>' + FOOTER[LANG] + "</span>" + STATEMENT + "</div>"; }
 
   // Σε υπολογιστή (με ποντίκι) το υπομενού ανοίγει μόλις περάσει το ποντίκι από πάνω
   if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
