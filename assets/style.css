@@ -242,13 +242,13 @@ html[data-page="home"] .site-footer { border-top-color: rgba(255, 255, 255, .12)
 .screen .cards.two-up { margin-inline: auto; }
 #dimiourgies h2, #creations h2 { text-align: center; }
 
-/* ---------- Αρχική: λογότυπο αριστερά, τίτλος δεξιά ----------
-   (class="hero split"). Στο κινητό μπαίνουν το ένα κάτω από το άλλο. */
-.hero.split .hero-in { display: grid; grid-template-columns: auto auto; align-items: center; justify-content: center; gap: clamp(28px, 6vw, 96px); max-width: var(--wide); width: 100%; }
-.hero .mind { width: clamp(170px, 24vw, 300px); height: auto; }
+/* ---------- Αρχική: λογότυπο αριστερά, «ΝΟΕΣ» στο κέντρο ----------
+   (class="hero split"). Τρεις στήλες: λογότυπο | τίτλος | κενό ίσο με το λογότυπο,
+   ώστε ο τίτλος να μένει ακριβώς στη μέση. Στο κινητό: το ένα κάτω από το άλλο. */
+.hero.split .hero-in { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: clamp(24px, 4vw, 64px); max-width: 1240px; width: 100%; }
+.hero .mind { width: clamp(150px, 20vw, 280px); height: auto; justify-self: center; }
 .hero .mind.boxed { background: #fff; border-radius: 28px; padding: 18px; }
-.hero.split .hero-text { display: flex; flex-direction: column; align-items: flex-start; gap: clamp(16px, 3vh, 30px); text-align: left; }
+.hero.split .hero-text { display: flex; flex-direction: column; align-items: center; gap: clamp(16px, 3vh, 30px); text-align: center; }
 @media (max-width: 720px) {
   .hero.split .hero-in { grid-template-columns: 1fr; justify-items: center; }
-  .hero.split .hero-text { align-items: center; text-align: center; }
 }
