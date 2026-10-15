@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 250">
+  <!-- Λογότυπο «νους-ερωτηματικό» (περίγραμμα).
+       Ένας εγκέφαλος που του λείπει ένα στρογγυλό κομμάτι· το κομμάτι έπεσε κάτω
+       και έγινε η τελεία του ερωτηματικού. Η τελεία είναι ΑΚΡΙΒΩΣ το κομμάτι που λείπει
+       (ίδιο σχήμα, ίδιες γραμμές που συνεχίζουν), απλώς λίγο γυρισμένο.
+       Χρώματα: περίγραμμα #ffffff, γραμμές #ecca63 -->
+  <defs>
+    <path id="brain" d="M40 112 C24 100 22 76 34 60 C40 38 62 24 86 26 C100 14 128 14 142 28 C164 28 182 46 178 70 C190 86 182 110 162 116 C160 130 140 138 124 132 C116 140 100 140 92 132 C84 136 70 136 62 130 C52 132 42 124 40 112 Z"/>
+    <g id="grooves" fill="none" stroke="#ecca63" stroke-width="3.5" stroke-linecap="round">
+      <path d="M70 50 C86 40 100 58 118 46"/>
+      <path d="M134 38 C150 46 144 66 162 72"/>
+      <path d="M120 84 C132 100 150 92 160 106"/>
+      <path d="M34 86 C50 76 62 96 78 104 C90 110 96 124 110 122"/>
+      <path d="M48 64 C58 54 68 70 82 64"/>
+      <path d="M90 76 C100 66 110 80 122 70"/>
+      <path d="M150 52 C160 50 166 60 174 60"/>
+      <path d="M128 112 C136 122 148 118 156 124"/>
+      <path d="M42 100 C48 108 44 116 52 122"/>
+      <path d="M98 30 C104 36 100 42 108 46"/>
+      <path d="M140 76 C146 82 154 78 160 84"/>
+      <path d="M64 82 C70 90 66 96 72 100"/>
+    </g>
+    <circle id="hole" cx="76" cy="124" r="21"/>
+    <clipPath id="inHole"><use href="#hole"/></clipPath>
+    <clipPath id="inBrain"><use href="#brain"/></clipPath>
+    <mask id="noHole" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="250">
+      <rect width="200" height="250" fill="#fff"/>
+      <circle cx="76" cy="124" r="22.5" fill="#000"/>
+    </mask>
+  </defs>
+  <g fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- ο εγκέφαλος χωρίς το κομμάτι: περίγραμμα + η άκρη του κενού -->
+    <g mask="url(#noHole)"><use href="#brain"/><use href="#grooves" clip-path="url(#inBrain)"/></g>
+    <use href="#hole" clip-path="url(#inBrain)"/>
+    <path d="M114 128 C119 148 110 158 110 178"/>
+    <!-- η τελεία = το κομμάτι που έπεσε (ίδιο περίγραμμα, ίδιες γραμμές) -->
+    <g transform="translate(34 86) rotate(18 76 124)">
+      <g clip-path="url(#inHole)"><use href="#brain"/><use href="#grooves" clip-path="url(#inBrain)"/></g>
+      <use href="#hole" clip-path="url(#inBrain)"/>
+    </g>
+  </g>
+</svg>
