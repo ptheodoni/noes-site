@@ -16,7 +16,7 @@
   <meta name="alt-lang" content="">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600&family=Roboto:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Tinos:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Roboto:wght@400;500&display=swap">
   <link rel="stylesheet" href="../assets/style.css">
   <link rel="icon" href="../images/favicon.png">
 </head>
@@ -31,65 +31,65 @@
       <h1>N<span class="rest">OES</span></h1>
       <a class="alt" href="../" lang="el">Ν<span class="rest">ΟΕΣ</span></a>
       <a class="vision" href="about/">Learn about our vision</a>
-      <a class="down" href="#more" aria-label="Continue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M5 12l7 7 7-7"/></svg></a>
+      <a class="down" href="#pillars" aria-label="Continue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M5 12l7 7 7-7"/></svg></a>
     </section>
 
-    <div class="wrap after-hero" id="more">
-      <div>
-      <!-- Ανακοίνωση -->
-      <div class="notice">
-        <b>New!</b>
-        <span>Open-air seminar on Artemis, in Artemis — July 2026.</span>
-        <a href="seminars/artemis/">Learn more →</a>
-      </div>
+    <!-- ===== ΟΘΟΝΗ 2: ΑΝΑΚΟΙΝΩΣΗ + ΠΥΛΩΝΕΣ (πιάνει όλη την οθόνη) =====
+         Ανακοίνωση: για να τη σβήσεις, σβήσε από <div class="notice"> μέχρι το </div>.
+         Πυλώνες: κάθε <article class="pillar"> είναι ένα κουτί. -->
+    <section class="screen" id="pillars">
+      <div class="wrap">
+        <div class="notice">
+          <b>New!</b>
+          <span>Open-air seminar on Artemis, in Artemis — July 2026.</span>
+          <a href="seminars/artemis/">Learn more →</a>
+        </div>
 
-      <div class="text">
-        <p class="eyebrow">Our vision</p>
-        <p class="lead">Noes is a scientific and philosophical initiative that aims to close the gap between academic research and society.</p>
-        <p><a href="about/">Learn about our vision →</a></p>
+        <h2>Our pillars</h2>
+        <div class="pillars">
+          <article class="pillar">
+            <h3><a href="publications/">Publications</a></h3>
+            <p>Writing and publishing scientific and philosophical works.</p>
+          </article>
+          <article class="pillar">
+            <h3><a href="seminars/">Seminars</a></h3>
+            <p>Interactive, in-person seminars on science and philosophy for everyone.</p>
+          </article>
+          <article class="pillar">
+            <h3><a href="research/">Research Mentoring</a></h3>
+            <p>A pioneering model of academic mentorship for students and independent researchers.</p>
+          </article>
+          <article class="pillar">
+            <h3><a href="consulting/">Consulting</a></h3>
+            <p>Specialised advisory services connecting cognitive science with practice.</p>
+          </article>
+        </div>
       </div>
+      <!-- Βελάκι προς την επόμενη οθόνη -->
+      <a class="down" href="#creations" aria-label="Continue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M5 12l7 7 7-7"/></svg></a>
+    </section>
 
-      <!-- Οι τέσσερις πυλώνες -->
-      <h2>Our pillars</h2>
-      <div class="pillars">
-        <article class="pillar">
-          <h3><a href="publications/">Publications</a></h3>
-          <p>Writing and publishing scientific and philosophical works.</p>
-        </article>
-        <article class="pillar">
-          <h3><a href="seminars/">Seminars</a></h3>
-          <p>Interactive, in-person seminars on science and philosophy for everyone.</p>
-        </article>
-        <article class="pillar">
-          <h3><a href="research/">Research Mentoring</a></h3>
-          <p>A pioneering model of academic mentorship for students and independent researchers.</p>
-        </article>
-        <article class="pillar">
-          <h3><a href="consulting/">Consulting</a></h3>
-          <p>Specialised advisory services connecting cognitive science with practice.</p>
-        </article>
+    <!-- ===== ΟΘΟΝΗ 3: ΔΗΜΙΟΥΡΓΙΕΣ (πιάνει όλη την οθόνη) =====
+         Κάθε <article class="card app"> είναι μία δημιουργία· για νέα, αντέγραψε ένα <article>…</article>. -->
+    <section class="screen" id="creations">
+      <div class="wrap">
+        <h2>Creations</h2>
+        <div class="cards apps two-up">
+          <article class="card app">
+            <p class="meta">Radio</p>
+            <h3>FemMe Radio</h3>
+            <p>Online radio: music around the clock, commentary, podcasts and live shows.</p>
+            <a class="more" href="https://www.femme-radio.gr" target="_blank" rel="noopener">femme-radio.gr ↗</a>
+          </article>
+          <article class="card app">
+            <p class="meta">Language games</p>
+            <h3>Logoplex</h3>
+            <p>Build sentences from word tiles: Chinese, Modern and Ancient Greek.</p>
+            <a class="more" href="creations/logoplex/">See the languages →</a>
+          </article>
+        </div>
       </div>
-
-      <!-- Creations -->
-      <h2>Creations</h2>
-      <!-- Κάθε <article class="card app"> είναι μία δημιουργία.
-           Για νέα: αντέγραψε ένα ολόκληρο <article>…</article> και άλλαξε τίτλο, κείμενο, σύνδεσμο. -->
-      <div class="cards apps two-up">
-        <article class="card app">
-          <p class="meta">Radio</p>
-          <h3>FemMe Radio</h3>
-          <p>Online radio: music around the clock, commentary, podcasts and live shows.</p>
-          <a class="more" href="https://www.femme-radio.gr" target="_blank" rel="noopener">femme-radio.gr ↗</a>
-        </article>
-        <article class="card app">
-          <p class="meta">Language games</p>
-          <h3>Logoplex</h3>
-          <p>Build sentences from word tiles: Chinese, Modern and Ancient Greek.</p>
-          <a class="more" href="creations/logoplex/">See the languages →</a>
-        </article>
-      </div>
-      </div>
-    </div>
+    </section>
   </main>
 
   <!-- Υποσέλιδο: το γεμίζει αυτόματα το assets/site.js -->

@@ -25,7 +25,7 @@
   <meta name="alt-lang" content="en/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600&family=Roboto:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Tinos:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Roboto:wght@400;500&display=swap">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="icon" href="images/favicon.png">
 </head>
@@ -43,72 +43,66 @@
       <!-- Το χρυσό «NOES» οδηγεί στην αγγλική εκδοχή -->
       <a class="alt" href="en/" lang="en">N<span class="rest">OES</span></a>
       <a class="vision" href="sxetika/">Μάθετε για το όραμά μας</a>
-      <!-- Το βελάκι κατεβαίνει στο #synexeia (πιο κάτω) -->
-      <a class="down" href="#synexeia" aria-label="Συνέχεια"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M5 12l7 7 7-7"/></svg></a>
+      <!-- Το βελάκι κατεβαίνει στους πυλώνες (#pylones) -->
+      <a class="down" href="#pylones" aria-label="Συνέχεια"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M5 12l7 7 7-7"/></svg></a>
     </section>
 
-    <!-- ===== ΤΟ ΥΠΟΛΟΙΠΟ ΤΗΣ ΑΡΧΙΚΗΣ ===== -->
-    <div class="wrap after-hero" id="synexeia">
-      <div>
-      <!-- ===== ΑΝΑΚΟΙΝΩΣΗ =====
-           Για να τη σβήσεις: σβήσε από <div class="notice"> μέχρι το </div>.
-           Για νέα ανακοίνωση: άλλαξε το κείμενο και τον σύνδεσμο. -->
-      <div class="notice">
-        <b>Νέο!</b>
-        <span>Open-air Seminar on Artemis, στην Αρτέμιδα — Ιούλιος 2026.</span>
-        <a href="seminaria/artemis/">Δείτε περισσότερα →</a>
-      </div>
+    <!-- ===== ΟΘΟΝΗ 2: ΑΝΑΚΟΙΝΩΣΗ + ΠΥΛΩΝΕΣ (πιάνει όλη την οθόνη) =====
+         Ανακοίνωση: για να τη σβήσεις, σβήσε από <div class="notice"> μέχρι το </div>.
+         Πυλώνες: κάθε <article class="pillar"> είναι ένα κουτί. -->
+    <section class="screen" id="pylones">
+      <div class="wrap">
+        <div class="notice">
+          <b>Νέο!</b>
+          <span>Open-air Seminar on Artemis, στην Αρτέμιδα — Ιούλιος 2026.</span>
+          <a href="seminaria/artemis/">Δείτε περισσότερα →</a>
+        </div>
 
-      <!-- ===== ΤΟ ΟΡΑΜΑ (σύντομα) ===== -->
-      <div class="text">
-        <p class="eyebrow">Το όραμά μας</p>
-        <p class="lead">Οι Νόες είναι μια επιστημονική και φιλοσοφική πρωτοβουλία που φιλοδοξεί να κλείσει την απόσταση ανάμεσα στην ακαδημαϊκή έρευνα και την κοινωνία.</p>
-        <p><a href="sxetika/">Μάθετε για το όραμά μας →</a></p>
+        <h2>Οι πυλώνες μας</h2>
+        <div class="pillars">
+          <article class="pillar">
+            <h3><a href="ekdoseis/">Εκδόσεις</a></h3>
+            <p>Συγγραφή και έκδοση επιστημονικών και φιλοσοφικών συγγραμμάτων.</p>
+          </article>
+          <article class="pillar">
+            <h3><a href="seminaria/">Σεμινάρια</a></h3>
+            <p>Διαδραστικά και δια ζώσης σεμινάρια επιστήμης και φιλοσοφίας για όλους.</p>
+          </article>
+          <article class="pillar">
+            <h3><a href="ereuna/">Ερευνητική Καθοδήγηση</a></h3>
+            <p>Ένα πρωτοποριακό μοντέλο ακαδημαϊκού mentorship για φοιτητές και ανεξάρτητους ερευνητές.</p>
+          </article>
+          <article class="pillar">
+            <h3><a href="symvouleftiki/">Συμβουλευτική</a></h3>
+            <p>Εξειδικευμένες συμβουλευτικές υπηρεσίες που συνδέουν τη γνωσιακή επιστήμη με την πράξη.</p>
+          </article>
+        </div>
       </div>
+      <!-- Βελάκι προς την επόμενη οθόνη -->
+      <a class="down" href="#dimiourgies" aria-label="Συνέχεια"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M5 12l7 7 7-7"/></svg></a>
+    </section>
 
-      <!-- ===== ΟΙ ΤΕΣΣΕΡΙΣ ΠΥΛΩΝΕΣ =====
-           Κάθε <article class="pillar"> είναι ένα κουτάκι.
-           Για πέμπτο πυλώνα, αντέγραψε ένα ολόκληρο <article>…</article>. -->
-      <h2>Οι πυλώνες μας</h2>
-      <div class="pillars">
-        <article class="pillar">
-          <h3><a href="ekdoseis/">Εκδόσεις</a></h3>
-          <p>Συγγραφή και έκδοση επιστημονικών και φιλοσοφικών συγγραμμάτων.</p>
-        </article>
-        <article class="pillar">
-          <h3><a href="seminaria/">Σεμινάρια</a></h3>
-          <p>Διαδραστικά και δια ζώσης σεμινάρια επιστήμης και φιλοσοφίας για όλους.</p>
-        </article>
-        <article class="pillar">
-          <h3><a href="ereuna/">Ερευνητική Καθοδήγηση</a></h3>
-          <p>Ένα πρωτοποριακό μοντέλο ακαδημαϊκού mentorship για φοιτητές και ανεξάρτητους ερευνητές.</p>
-        </article>
-        <article class="pillar">
-          <h3><a href="symvouleftiki/">Συμβουλευτική</a></h3>
-          <p>Εξειδικευμένες συμβουλευτικές υπηρεσίες που συνδέουν τη γνωσιακή επιστήμη με την πράξη.</p>
-        </article>
+    <!-- ===== ΟΘΟΝΗ 3: ΔΗΜΙΟΥΡΓΙΕΣ (πιάνει όλη την οθόνη) =====
+         Κάθε <article class="card app"> είναι μία δημιουργία· για νέα, αντέγραψε ένα <article>…</article>. -->
+    <section class="screen" id="dimiourgies">
+      <div class="wrap">
+        <h2>Δημιουργίες</h2>
+        <div class="cards apps two-up">
+          <article class="card app">
+            <p class="meta">Ραδιόφωνο</p>
+            <h3>FemMe Radio</h3>
+            <p>Διαδικτυακό ραδιόφωνο: μουσική όλο το 24ωρο, σχόλια, podcasts και ζωντανές εκπομπές.</p>
+            <a class="more" href="https://www.femme-radio.gr" target="_blank" rel="noopener">femme-radio.gr ↗</a>
+          </article>
+          <article class="card app">
+            <p class="meta">Παιχνίδια γλώσσας</p>
+            <h3>Logoplex</h3>
+            <p>Φτιάξε προτάσεις από πλακίδια λέξεων: κινέζικα, νέα και αρχαία ελληνικά.</p>
+            <a class="more" href="dimiourgies/logoplex/">Δες τις γλώσσες →</a>
+          </article>
+        </div>
       </div>
-
-      <!-- ===== ΔΗΜΙΟΥΡΓΙΕΣ (ίδιες κάρτες με τη σελίδα dimiourgies/) ===== -->
-      <h2>Δημιουργίες</h2>
-      <!-- Κάθε <article class="card app"> είναι μία δημιουργία.
-           Για νέα: αντέγραψε ένα ολόκληρο <article>…</article> και άλλαξε τίτλο, κείμενο, σύνδεσμο. -->
-      <div class="cards apps two-up">
-        <article class="card app">
-          <p class="meta">Ραδιόφωνο</p>
-          <h3>FemMe Radio</h3>
-          <p>Διαδικτυακό ραδιόφωνο: μουσική όλο το 24ωρο, σχόλια, podcasts και ζωντανές εκπομπές.</p>
-          <a class="more" href="https://www.femme-radio.gr" target="_blank" rel="noopener">femme-radio.gr ↗</a>
-        </article>
-        <article class="card app">
-          <p class="meta">Παιχνίδια γλώσσας</p>
-          <h3>Logoplex</h3>
-          <p>Φτιάξε προτάσεις από πλακίδια λέξεων: κινέζικα, νέα και αρχαία ελληνικά.</p>
-          <a class="more" href="dimiourgies/logoplex/">Δες τις γλώσσες →</a>
-        </article>
-      </div>
-      </div>
-    </div>
+    </section>
   </main>
 
   <!-- Υποσέλιδο: το γεμίζει αυτόματα το assets/site.js -->

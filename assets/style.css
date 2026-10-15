@@ -23,11 +23,20 @@
   --shadow: 0 1px 2px rgba(16, 26, 51, .05), 0 8px 28px rgba(16, 26, 51, .07);
   --shadow-hover: 0 2px 4px rgba(16, 26, 51, .06), 0 16px 40px rgba(16, 26, 51, .12);
 
-  /* --- Γραμματοσειρές --- */
-  --sans: "Inter", "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;   /* κείμενο */
-  --display: "Inter Tight", "Inter", system-ui, sans-serif;   /* τίτλοι */
-  --ui: var(--sans);                                          /* μενού, ετικέτες, κουμπιά */
-  --brand: "Roboto", "Inter", system-ui, sans-serif;          /* το μεγάλο «ΝΟΕΣ» της αρχικής */
+  /* --- Γραμματοσειρές ---
+     ΠΩΣ ΤΙΣ ΑΛΛΑΖΕΙΣ: γράψε άλλο όνομα στην αρχή της λίστας.
+     Η λίστα είναι «πρώτη επιλογή, αν λείπει η δεύτερη, …».
+     Έτοιμες επιλογές με ελληνικά (φορτώνονται ήδη):
+       "GFS Didot"   — κλασική ελληνική με πατούρες (τίτλοι)
+       "Tinos"       — ίδια με την Times New Roman (κείμενο)
+       "Inter"       — μοντέρνα χωρίς πατούρες
+       "Roboto"      — μοντέρνα χωρίς πατούρες (το «ΝΟΕΣ» της αρχικής)
+     Για άλλη γραμματοσειρά από το fonts.google.com, πρόσθεσέ τη και
+     στη γραμμή <link … fonts.googleapis.com …> κάθε σελίδας. */
+  --display: "GFS Didot", "Times New Roman", Georgia, serif;   /* τίτλοι */
+  --body: "Tinos", "Times New Roman", Times, serif;              /* κείμενο */
+  --ui: "Inter", "Roboto", system-ui, sans-serif;                /* μενού, ετικέτες, κουμπιά */
+  --brand: "Roboto", "Inter", system-ui, sans-serif;             /* το μεγάλο «ΝΟΕΣ» της αρχικής */
 
   --measure: 68ch;        /* πλάτος γραμμής κειμένου */
   --wide: 1120px;         /* μέγιστο πλάτος σελίδας */
@@ -54,7 +63,7 @@
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 body {
   margin: 0; background: var(--paper); color: var(--ink);
-  font: 400 17px/1.7 var(--sans); -webkit-font-smoothing: antialiased;
+  font: 400 18.5px/1.65 var(--body); -webkit-font-smoothing: antialiased;
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
 }
@@ -62,10 +71,10 @@ a { color: var(--navy); text-underline-offset: 3px; text-decoration-thickness: 1
 a:hover { text-decoration-thickness: 2px; }
 a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 3px; border-radius: 4px; }
 img { max-width: 100%; height: auto; display: block; }
-h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.12; letter-spacing: -.02em; text-wrap: balance; color: var(--ink); }
-h1 { font-size: clamp(2.3rem, 5.5vw, 3.6rem); margin: 0 0 .35em; }
-h2 { font-size: clamp(1.55rem, 3.2vw, 2.1rem); margin: 1.8em 0 .6em; }
-h3 { font-size: 1.22rem; margin: 1.3em 0 .35em; letter-spacing: -.01em; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.12; letter-spacing: 0; text-wrap: balance; color: var(--ink); }
+h1 { font-size: clamp(2.5rem, 6vw, 4rem); margin: 0 0 .35em; }
+h2 { font-size: clamp(1.8rem, 3.6vw, 2.5rem); margin: 1.8em 0 .6em; }
+h3 { font-size: 1.4rem; margin: 1.3em 0 .35em; }
 p { margin: 0 0 1em; }
 ul { padding-left: 1.2em; }
 li { margin-bottom: .4em; }
@@ -193,13 +202,22 @@ main .wrap { padding-block: 56px 88px; }
 /* ---------- Αρχική σελίδα: όλη η σελίδα στο ίδιο σκούρο μπλε ----------
    Ισχύει μόνο όπου <html data-page="home">. Τα κουτιά είναι «γυάλινα». */
 html[data-page="home"] body { background: var(--navy-deep); color: #eef1f8; }
-html[data-page="home"] .after-hero { padding-top: 24px; }
+/* Κάθε ενότητα της αρχικής πιάνει όλη την οθόνη· το βελάκι πάει στην επόμενη */
+html[data-page="home"] { scroll-snap-type: y proximity; }
+.hero, .screen { scroll-snap-align: start; }
+.screen { min-height: calc(100svh - 63px); display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 28px; padding-block: 56px 40px; scroll-margin-top: 63px; }
+.screen > .wrap { width: 100%; padding-block: 0; }
+.screen > .wrap > h2:first-child, .screen .notice + h2 { margin-top: .6em; }
+.screen .down { width: 50px; height: 50px; border-radius: 50%; background: rgba(255, 255, 255, .9); color: var(--navy-deep); display: grid; place-items: center; text-decoration: none; animation: bob 2.4s ease-in-out infinite; }
+.screen .down svg { width: 26px; height: 26px; }
+html[data-page="home"] .screen .down { color: var(--navy-deep); }
+@media (max-width: 860px) { .screen { min-height: 100svh; scroll-margin-top: 0; } }
 html[data-page="home"] main h2 { color: #fff; }
 html[data-page="home"] main a { color: var(--gold-bright); }
 html[data-page="home"] .hero a.vision { color: rgba(255, 255, 255, .88); }
 html[data-page="home"] .hero a.down { color: var(--navy-deep); }
 html[data-page="home"] .eyebrow { color: var(--gold-bright); }
-html[data-page="home"] .lead { color: rgba(255, 255, 255, .82); font-size: clamp(1.25rem, 2.6vw, 1.7rem); line-height: 1.45; }
+html[data-page="home"] .lead { color: rgba(255, 255, 255, .82); }
 html[data-page="home"] .notice { background: rgba(255, 255, 255, .07); border: 1px solid rgba(255, 255, 255, .14); color: #fff; }
 html[data-page="home"] .notice b { background: var(--gold-bright); color: var(--navy-deep); }
 html[data-page="home"] .pillar,
@@ -219,3 +237,7 @@ html[data-page="home"] .site-footer { border-top-color: rgba(255, 255, 255, .12)
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
+
+/* Αρχική — οθόνη «Δημιουργίες»: τίτλος και κουτιά στο κέντρο */
+.screen .cards.two-up { margin-inline: auto; }
+#dimiourgies h2, #creations h2 { text-align: center; }
