@@ -53,18 +53,31 @@
     var cur = item.id === HERE ? ' aria-current="page"' : "";
     return '<a href="' + ROOT + item.href + '"' + cur + ">" + item.label + "</a>";
   }
+  // Ανάμεσα στα στοιχεία του μενού μπαίνει τελεία «•»· πριν από το τελευταίο
+  // (Σχετικά / About) μπαίνει κάθετη γραμμή «|», όπως στο παλιό site.
   function menuHTML() {
-    return MENU[LANG].map(function (item) {
-      if (!item.sub) return link(item);
-      return "<details><summary>" + item.label + '</summary><div class="sub">' + item.sub.map(link).join("") + "</div></details>";
-    }).join("") + '<a class="lang" href="' + ROOT + ALT + '" lang="' + (LANG === "el" ? "en" : "el") + '">' + (LANG === "el" ? "English" : "Ελληνικά") + "</a>";
+    var items = MENU[LANG];
+    return items.map(function (item, i) {
+      var sep = i === 0 ? "" : '<span class="sep" aria-hidden="true">' + (i === items.length - 1 ? "|" : "•") + "</span>";
+      if (!item.sub) return sep + link(item);
+      return sep + "<details><summary>" + item.label + '</summary><div class="sub">' + item.sub.map(link).join("") + "</div></details>";
+    }).join("");
+  }
+  // «ελ / en» πάνω δεξιά· η τρέχουσα γλώσσα είναι έντονη, η άλλη είναι σύνδεσμος
+  function langHTML() {
+    var other = '<a href="' + ROOT + ALT + '" lang="' + (LANG === "el" ? "en" : "el") + '">' + (LANG === "el" ? "en" : "ελ") + "</a>";
+    var cur = "<b>" + (LANG === "el" ? "ελ" : "en") + "</b>";
+    return LANG === "el" ? cur + " / " + other : other + " / " + cur;
   }
 
   var head = document.getElementById("site-header");
   if (head) {
     head.className = "site-header";
+    // Το λογότυπο είναι η χειρόγραφη υπογραφή images/noes-signature.png
     head.innerHTML = '<div class="wrap"><a class="logo" href="' + ROOT + (LANG === "en" ? "en/" : "") + '">' +
-      (LANG === "el" ? "Νόες" : "Noes") + '<span>.</span></a><nav class="nav" aria-label="' + (LANG === "el" ? "Κύριο μενού" : "Main menu") + '">' + menuHTML() + "</nav></div>";
+      '<img src="' + ROOT + 'images/noes-signature.png" alt="' + (LANG === "el" ? "Νόες" : "Noes") + '" width="130" height="58"></a>' +
+      '<nav class="nav" aria-label="' + (LANG === "el" ? "Κύριο μενού" : "Main menu") + '">' + menuHTML() + "</nav>" +
+      '<div class="lang">' + langHTML() + "</div></div>";
   }
   var foot = document.getElementById("site-footer");
   if (foot) { foot.className = "site-footer"; foot.innerHTML = '<div class="wrap"><span>' + FOOTER[LANG] + "</span></div>"; }

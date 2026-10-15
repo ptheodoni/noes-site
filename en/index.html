@@ -16,7 +16,7 @@
   <meta name="alt-lang" content="">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=IBM+Plex+Sans:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Roboto:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap">
   <link rel="stylesheet" href="../assets/style.css">
   <link rel="icon" href="../images/favicon.png">
 </head>
@@ -25,15 +25,17 @@
   <header id="site-header"></header>
 
   <main>
-    <div class="wrap">
-      <section class="hero">
-        <h1>NOES <small>ΝΟΕΣ</small></h1>
-        <blockquote>
-          “Mind knew all things.”
-          <cite>Anaxagoras — πάντα ἐγίνωσκε νοῦς</cite>
-        </blockquote>
-      </section>
+    <!-- Η μεγάλη μπλε ζώνη (hero) — λογότυπο: images/logo.png -->
+    <section class="hero">
+      <div class="logo-box"><img src="../images/logo.png" alt="The Noes logo"></div>
+      <h1>N<span class="rest">OES</span></h1>
+      <a class="alt" href="../" lang="el">Ν<span class="rest">ΟΕΣ</span></a>
+      <a class="vision" href="about/">Learn about our vision</a>
+      <a class="down" href="#more" aria-label="Continue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M5 12l7 7 7-7"/></svg></a>
+    </section>
 
+    <div class="wrap after-hero" id="more">
+      <div>
       <!-- Ανακοίνωση -->
       <div class="notice">
         <b>New!</b>
@@ -72,6 +74,7 @@
         <h2>The founder</h2>
         <p>Noes was founded by Dr. Panagiota Theodoni, Principal Investigator of the Theodoni Lab, with a background in Physics and Theoretical &amp; Computational Neuroscience.</p>
         <p><a href="about/#founder">Read more →</a></p>
+      </div>
       </div>
     </div>
   </main>

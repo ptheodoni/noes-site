@@ -25,7 +25,7 @@
   <meta name="alt-lang" content="en/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=IBM+Plex+Sans:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Roboto:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="icon" href="images/favicon.png">
 </head>
@@ -34,17 +34,22 @@
   <header id="site-header"></header>
 
   <main>
-    <div class="wrap">
-      <!-- ===== ΜΕΓΑΛΟΣ ΤΙΤΛΟΣ ===== -->
-      <section class="hero">
-        <h1>ΝΟΕΣ <small>NOES</small></h1>
-        <!-- Το ρητό δεξιά. Άλλαξέ το ελεύθερα. -->
-        <blockquote>
-          «πάντα ἐγίνωσκε νοῦς»
-          <cite>Αναξαγόρας — ο νους τα γνώρισε όλα</cite>
-        </blockquote>
-      </section>
+    <!-- ===== Η ΜΕΓΑΛΗ ΜΠΛΕ ΖΩΝΗ (hero) =====
+         Λογότυπο, ΝΟΕΣ, NOES, σύνδεσμος για το όραμα και βελάκι προς τα κάτω.
+         Το λογότυπο είναι το αρχείο images/logo.png — άλλαξέ το εκεί. -->
+    <section class="hero">
+      <div class="logo-box"><img src="images/logo.png" alt="Το λογότυπο των Νόων"></div>
+      <h1>Ν<span class="rest">ΟΕΣ</span></h1>
+      <!-- Το χρυσό «NOES» οδηγεί στην αγγλική εκδοχή -->
+      <a class="alt" href="en/" lang="en">N<span class="rest">OES</span></a>
+      <a class="vision" href="sxetika/">Μάθετε για το όραμά μας</a>
+      <!-- Το βελάκι κατεβαίνει στο #synexeia (πιο κάτω) -->
+      <a class="down" href="#synexeia" aria-label="Συνέχεια"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M5 12l7 7 7-7"/></svg></a>
+    </section>
 
+    <!-- ===== ΤΟ ΥΠΟΛΟΙΠΟ ΤΗΣ ΑΡΧΙΚΗΣ ===== -->
+    <div class="wrap after-hero" id="synexeia">
+      <div>
       <!-- ===== ΑΝΑΚΟΙΝΩΣΗ =====
            Για να τη σβήσεις: σβήσε από <div class="notice"> μέχρι το </div>.
            Για νέα ανακοίνωση: άλλαξε το κείμενο και τον σύνδεσμο. -->
@@ -89,6 +94,7 @@
         <h2>Η ιδρύτρια</h2>
         <p>Ιδρύτρια των «Νόων» και Κύρια Ερευνήτρια του Theodoni Lab είναι η Δρ. Παναγιώτα Θεοδώνη, με υπόβαθρο στη Φυσική και στη Θεωρητική και Υπολογιστική Νευροεπιστήμη.</p>
         <p><a href="sxetika/#idrytria">Διαβάστε περισσότερα →</a></p>
+      </div>
       </div>
     </div>
   </main>
