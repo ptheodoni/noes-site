@@ -243,9 +243,10 @@ html[data-page="home"] .site-footer { border-top-color: rgba(255, 255, 255, .12)
    (class="hero split"). Τρεις στήλες: λογότυπο | τίτλος | κενό ίσο με το λογότυπο,
    ώστε ο τίτλος να μένει ακριβώς στη μέση. Στο κινητό: το ένα κάτω από το άλλο. */
 .hero.split .hero-in { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: clamp(24px, 4vw, 64px); max-width: 1240px; width: 100%; }
-.hero .mind { height: clamp(4rem, 12vw, 9rem); width: auto;  /* ύψος λογότυπου = ύψος του «ΝΟΕΣ» */
+.hero .mind { font-size: clamp(4rem, 12vw, 9rem);  /* ίδιο μέγεθος γραμμάτων με το «ΝΟΕΣ» (.hero h1) */
+  height: .845em; width: auto;              /* ύψος: ο εγκέφαλος πιάνει ακριβώς το ύψος του κεφαλαίου Ν */
   justify-self: end; align-self: start;     /* στέκεται στην ίδια γραμμή με το «ΝΟΕΣ» */
-  margin-top: 0;                             /* μικρή κατακόρυφη διόρθωση (θετικό = πιο κάτω) */
+  margin-top: .08em;                         /* κορυφή εγκεφάλου = κορυφή του Ν (μεγαλύτερο = πιο κάτω) */
   margin-right: clamp(-30px, -1.5vw, 0px); } /* απόσταση από το ΝΟΕΣ (μεγαλύτερο = πιο αριστερά) */
 @media (max-width: 720px) { .hero .mind { justify-self: center; margin-right: 0; height: 110px; } }
 .hero .mind.boxed { background: #fff; border-radius: 28px; padding: 18px; }
