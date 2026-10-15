@@ -312,7 +312,8 @@ main .wrap > h2[id]:first-child, main .wrap > .text:first-child > h2[id]:first-c
 .creations { display: grid; gap: 22px; margin-top: 36px; max-width: 920px; }
 .creation { display: grid; grid-template-columns: 76px 1fr; gap: 8px 26px; align-items: start; background: var(--paper);
   border: 1px solid var(--line); border-radius: var(--radius); padding: 30px 32px; box-shadow: var(--shadow); }
-.creation-icon { width: 76px; height: 76px; border-radius: 22px; background: var(--navy-deep); display: grid; place-items: center; font-size: 36px; line-height: 1; }
+.creation-icon { width: 76px; height: 76px; border-radius: 22px; background: var(--navy-deep); display: grid; place-items: center; font-size: 36px; line-height: 1; color: var(--gold-bright); }
+.creation-icon svg { width: 52%; height: 52%; }  /* μέγεθος εικονιδίου μέσα στο τετράγωνο */
 .creation .meta { font: 600 12px/1.4 var(--ui); letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin: 4px 0 6px; }
 .creation h2 { margin: 0 0 12px; font-size: clamp(1.6rem, 3vw, 2.1rem); }
 .creation p { margin: 0 0 12px; }
