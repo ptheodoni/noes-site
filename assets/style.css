@@ -149,6 +149,35 @@ main .wrap { padding-block: 48px 72px; }
 @media (max-width: 760px) { .two { grid-template-columns: 1fr; } }
 .figure { border-radius: 12px; overflow: hidden; background: var(--navy-soft); }
 
+/* Εφαρμογές: οι σύνδεσμοι στις κάρτες */
+.cards.apps { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }  /* 4 κάρτες σε μία σειρά */
+.card.app h3 { font-size: 1.3rem; }
+
+/* ---------- Αρχική σελίδα: όλη η σελίδα στο ίδιο σκούρο μπλε ----------
+   Ισχύει μόνο όπου <html data-page="home">. Οι πυλώνες και οι εφαρμογές
+   γίνονται «κουτιά» που ξεχωρίζουν πάνω στο μπλε. */
+html[data-page="home"] body { background: var(--navy-deep); color: #eef1f8; }
+html[data-page="home"] main h2 { color: #fff; }
+html[data-page="home"] main a { color: var(--gold-bright); }
+html[data-page="home"] .hero a.vision { color: rgba(255, 255, 255, .85); }
+html[data-page="home"] .hero a.down { color: var(--navy-deep); }
+html[data-page="home"] .eyebrow { color: var(--gold-bright); }
+html[data-page="home"] .lead { color: rgba(255, 255, 255, .8); }
+html[data-page="home"] .notice { background: rgba(255, 255, 255, .08); border: 1px solid rgba(236, 202, 99, .45); color: #fff; }
+html[data-page="home"] .notice b { color: var(--gold-bright); }
+html[data-page="home"] .pillars { border: 0; gap: 18px; margin-top: 16px; }
+html[data-page="home"] .pillar,
+html[data-page="home"] .card { background: rgba(255, 255, 255, .07); border: 1px solid rgba(255, 255, 255, .16); border-radius: 18px; padding: 26px 24px; transition: transform .2s, background .2s, border-color .2s; }
+html[data-page="home"] .pillar:hover,
+html[data-page="home"] .card:hover { transform: translateY(-3px); background: rgba(255, 255, 255, .11); border-color: var(--gold-bright); }
+html[data-page="home"] .pillar h3 { margin-bottom: 10px; }
+html[data-page="home"] .pillar h3 a, html[data-page="home"] .card h3 { color: #fff; }
+html[data-page="home"] .pillar h3::before { content: ""; display: block; width: 28px; height: 3px; background: var(--gold-bright); border-radius: 2px; margin-bottom: 14px; }
+html[data-page="home"] .pillar p, html[data-page="home"] .card p { color: rgba(255, 255, 255, .72); }
+html[data-page="home"] .card .meta { color: var(--gold-bright); }
+html[data-page="home"] .site-footer { border-top-color: rgba(255, 255, 255, .15); color: rgba(255, 255, 255, .6); }
+@media (prefers-reduced-motion: reduce) { html[data-page="home"] .pillar, html[data-page="home"] .card { transition: none; } }
+
 /* ---------- Υποσέλιδο ---------- */
 .site-footer { border-top: 1px solid var(--line); font: 14px/1.6 var(--ui); color: var(--muted); }
 .site-footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-block: 24px 40px; }
