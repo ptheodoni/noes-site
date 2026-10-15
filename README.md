@@ -14,6 +14,8 @@ seminaria/artemis/         Open-air Seminar on Artemis
 seminaria/anoia/           Κατανοώντας την Άνοια
 ereuna/index.html          Ερευνητική Καθοδήγηση
 symvouleftiki/index.html   Συμβουλευτική
+dimiourgies/               Δημιουργίες (FemMe Radio, Logoplex)
+dimiourgies/logoplex/      Logoplex: οι γλώσσες
 en/…                       οι ίδιες σελίδες στα αγγλικά
 assets/style.css           χρώματα, γραμματοσειρές, εμφάνιση (για ΟΛΕΣ τις σελίδες)
 assets/site.js             μενού, υποσέλιδο, παλιοί σύνδεσμοι WordPress

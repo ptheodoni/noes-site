@@ -152,6 +152,7 @@ main .wrap { padding-block: 48px 72px; }
 /* Εφαρμογές: οι σύνδεσμοι στις κάρτες */
 .cards.apps { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }  /* 4 κάρτες σε μία σειρά */
 .card.app h3 { font-size: 1.3rem; }
+.cards.two-up { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); max-width: 760px; }  /* 2 μεγαλύτερες κάρτες */
 
 /* ---------- Αρχική σελίδα: όλη η σελίδα στο ίδιο σκούρο μπλε ----------
    Ισχύει μόνο όπου <html data-page="home">. Οι πυλώνες και οι εφαρμογές

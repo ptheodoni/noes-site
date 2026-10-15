@@ -24,7 +24,7 @@
       ] },
       { id: "ereuna", label: "Έρευνα", href: "ereuna/" },
       { id: "symvouleftiki", label: "Συμβουλευτική", href: "symvouleftiki/" },
-      { id: "efarmoges", label: "Εφαρμογές", href: "efarmoges/" },
+      { id: "dimiourgies", label: "Δημιουργίες", href: "dimiourgies/" },
       { id: "sxetika", label: "Σχετικά", href: "sxetika/" }
     ],
     en: [
@@ -36,7 +36,7 @@
       ] },
       { id: "research", label: "Research", href: "en/research/" },
       { id: "consulting", label: "Consulting", href: "en/consulting/" },
-      { id: "apps", label: "Applications", href: "en/apps/" },
+      { id: "creations", label: "Creations", href: "en/creations/" },
       { id: "about", label: "About", href: "en/about/" }
     ]
   };
