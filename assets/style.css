@@ -244,10 +244,10 @@ html[data-page="home"] .site-footer { border-top-color: rgba(255, 255, 255, .12)
    ώστε ο τίτλος να μένει ακριβώς στη μέση. Στο κινητό: το ένα κάτω από το άλλο. */
 .hero.split .hero-in { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: clamp(24px, 4vw, 64px); max-width: 1240px; width: 100%; }
 .hero .mind { font-size: clamp(4rem, 12vw, 9rem);  /* ίδιο μέγεθος γραμμάτων με το «ΝΟΕΣ» (.hero h1) */
-  height: .845em; width: auto;              /* ύψος: ο εγκέφαλος πιάνει ακριβώς το ύψος του κεφαλαίου Ν */
+  height: .95em; width: auto;               /* μέγεθος εγκεφάλου (.845em = ακριβώς όσο το Ν· μεγαλύτερο = μεγαλύτερος) */
   justify-self: end; align-self: start;     /* στέκεται στην ίδια γραμμή με το «ΝΟΕΣ» */
-  margin-top: .08em;                         /* κορυφή εγκεφάλου = κορυφή του Ν (μεγαλύτερο = πιο κάτω) */
-  margin-right: clamp(-30px, -1.5vw, 0px); } /* απόσταση από το ΝΟΕΣ (μεγαλύτερο = πιο αριστερά) */
+  margin-top: .02em;                         /* κεντραρισμένος στο ύψος του Ν (μεγαλύτερο = πιο κάτω) */
+  margin-right: calc(.06em - clamp(24px, 4vw, 64px)); } /* απόσταση από το ΝΟΕΣ: άλλαξε το .06em (μεγαλύτερο = πιο αριστερά) */
 @media (max-width: 720px) { .hero .mind { justify-self: center; margin-right: 0; height: 110px; } }
 .hero .mind.boxed { background: #fff; border-radius: 28px; padding: 18px; }
 .hero.split .hero-text { display: flex; flex-direction: column; align-items: center; gap: clamp(16px, 3vh, 30px); text-align: center; }

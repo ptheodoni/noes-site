@@ -36,9 +36,9 @@
     </mask>
     <mask id="noHole" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="250">
       <rect width="200" height="250" fill="#fff"/>
-      <circle cx="86" cy="121" r="28.6" fill="#000"/>
+      <circle cx="86" cy="121" r="33.6" fill="#000"/>
     </mask>
-    <clipPath id="inHole"><circle cx="86" cy="121" r="26"/></clipPath>
+    <clipPath id="inHole"><circle cx="86" cy="121" r="31"/></clipPath>
   </defs>
   <g fill="#ecca63">
     <!-- ο εγκέφαλος, χωρίς το κομμάτι -->
