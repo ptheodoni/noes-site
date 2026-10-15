@@ -1,0 +1,78 @@
+<!doctype html>
+<!--
+  =====================================================================
+  ΣΕΛΙΔΑ: Σεμινάρια — Νόες
+  Αρχείο: seminaria/index.html  (η διεύθυνση είναι noes.gr/seminaria/)
+
+  ΠΩΣ ΤΗΝ ΑΛΛΑΖΕΙΣ
+  - Άλλαξε μόνο το κείμενο ανάμεσα στο <main> και στο </main>.
+  - Η κεφαλίδα (λογότυπο, μενού) και το υποσέλιδο μπαίνουν αυτόματα
+    από το assets/site.js — δεν τα γράφεις εδώ.
+  - Χρώματα/γραμματοσειρές: assets/style.css (μπλοκ :root).
+  - <p>…</p> = παράγραφος, <h2>…</h2> = υπότιτλος,
+    <a href="…">…</a> = σύνδεσμος, <b>…</b> = έντονα.
+  =====================================================================
+-->
+<html lang="el" data-root="../" data-page="seminaria">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- Ο τίτλος στην καρτέλα του browser και στη Google -->
+  <title>Σεμινάρια — Νόες</title>
+  <!-- Η περιγραφή που δείχνει η Google κάτω από τον τίτλο -->
+  <meta name="description" content="Σεμινάρια επιστήμης και φιλοσοφίας για όλους, χωρίς προηγούμενη εξειδικευμένη γνώση.">
+  <!-- Η ίδια σελίδα στην άλλη γλώσσα (για το κουμπί English/Ελληνικά) -->
+  <meta name="alt-lang" content="en/seminars/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=IBM+Plex+Sans:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="icon" href="../images/favicon.png">
+</head>
+<body>
+  <!-- Κεφαλίδα: τη γεμίζει αυτόματα το assets/site.js -->
+  <header id="site-header"></header>
+
+  <main>
+    <div class="wrap">
+      <div class="text">
+        <p class="eyebrow">Σεμινάρια</p>
+        <h1>Επιστήμη &amp; Φιλοσοφία για Όλους</h1>
+        <p>Τα σεμινάρια αυτά γεννήθηκαν από την πεποίθηση ότι η επιστημονική και φιλοσοφική έρευνα δεν πρέπει να μένει κλεισμένη στα στενά όρια της ακαδημίας, αλλά ούτε και να εκλαϊκεύεται με τρόπο που να χάνει το βάθος της. Στόχος δεν είναι να «απλοποιήσουμε» τη γνώση υποβιβάζοντάς την, αλλά να προσφέρουμε τα κατάλληλα εργαλεία ώστε το κοινό να προσεγγίσει και να κατανοήσει την επιστήμη και τη φιλοσοφία στο πραγματικό τους επίπεδο.</p>
+        <p>Δεν απαιτείται καμία προηγούμενη εξειδικευμένη γνώση — μόνο περιέργεια και διάθεση για διάλογο.</p>
+        <p>Με πρότυπο την πρωτοβουλία <a href="https://ptheodoni.github.io/portfolio/scienceasahobby/">Science as a Hobby</a>, δημιουργούμε έναν διαδραστικό χώρο όπου η βαθιά γνώση γίνεται προσβάσιμη, ζωντανή και κομμάτι της καθημερινότητάς μας.</p>
+      </div>
+
+      <!-- ===== ΤΡΕΧΟΝΤΑ ΣΕΜΙΝΑΡΙΑ =====
+           Κάθε <article class="card"> είναι μία κάρτα σεμιναρίου.
+           ΝΕΟ ΣΕΜΙΝΑΡΙΟ: αντέγραψε μια ολόκληρη κάρτα, άλλαξε τίτλο,
+           κείμενο και σύνδεσμο. Μετά φτιάξε τη σελίδα του (δες README). -->
+      <h2>Τρέχοντα σεμινάρια</h2>
+      <div class="cards">
+        <article class="card">
+          <p class="meta">Αρτέμιδα · Ιούλιος 2026 · στα αγγλικά</p>
+          <h3>Open-air Seminar on Artemis</h3>
+          <p>Ένα υπαίθριο σεμινάριο για τη μυθολογία της Άρτεμης και τις βαθιές συνδέσεις της με τη φιλοσοφία και την επιστήμη.</p>
+          <a class="more" href="artemis/">Περισσότερα →</a>
+        </article>
+        <article class="card">
+          <p class="meta">Στα ελληνικά</p>
+          <h3>Κατανοώντας την Άνοια</h3>
+          <p>Νευροεπιστήμη, Φιλοσοφία και η Τέχνη της Φροντίδας.</p>
+          <a class="more" href="anoia/">Περισσότερα →</a>
+        </article>
+        <article class="card">
+          <p class="meta">In English</p>
+          <h3>Understanding Dementia</h3>
+          <p>Neuroscience, Philosophy and the Art of Care.</p>
+          <a class="more" href="../en/seminars/dementia/">More →</a>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <!-- Υποσέλιδο: το γεμίζει αυτόματα το assets/site.js -->
+  <footer id="site-footer"></footer>
+  <script src="../assets/site.js"></script>
+</body>
+</html>

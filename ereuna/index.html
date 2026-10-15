@@ -1,0 +1,64 @@
+<!doctype html>
+<!--
+  =====================================================================
+  ΣΕΛΙΔΑ: Ερευνητική Καθοδήγηση — Νόες
+  Αρχείο: ereuna/index.html  (η διεύθυνση είναι noes.gr/ereuna/)
+
+  ΠΩΣ ΤΗΝ ΑΛΛΑΖΕΙΣ
+  - Άλλαξε μόνο το κείμενο ανάμεσα στο <main> και στο </main>.
+  - Η κεφαλίδα (λογότυπο, μενού) και το υποσέλιδο μπαίνουν αυτόματα
+    από το assets/site.js — δεν τα γράφεις εδώ.
+  - Χρώματα/γραμματοσειρές: assets/style.css (μπλοκ :root).
+  - <p>…</p> = παράγραφος, <h2>…</h2> = υπότιτλος,
+    <a href="…">…</a> = σύνδεσμος, <b>…</b> = έντονα.
+  =====================================================================
+-->
+<html lang="el" data-root="../" data-page="ereuna">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- Ο τίτλος στην καρτέλα του browser και στη Google -->
+  <title>Ερευνητική Καθοδήγηση — Νόες</title>
+  <!-- Η περιγραφή που δείχνει η Google κάτω από τον τίτλο -->
+  <meta name="description" content="Ένα πρωτοποριακό μοντέλο ακαδημαϊκού mentorship.">
+  <!-- Η ίδια σελίδα στην άλλη γλώσσα (για το κουμπί English/Ελληνικά) -->
+  <meta name="alt-lang" content="en/research/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=IBM+Plex+Sans:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="icon" href="../images/favicon.png">
+</head>
+<body>
+  <!-- Κεφαλίδα: τη γεμίζει αυτόματα το assets/site.js -->
+  <header id="site-header"></header>
+
+  <main>
+    <div class="wrap">
+      <div class="text">
+        <p class="eyebrow">Νόες</p>
+        <h1>Ερευνητική Καθοδήγηση</h1>
+        <p class="lead">Ένα πρωτοποριακό μοντέλο ακαδημαϊκού mentorship.</p>
+
+        <!-- Λίστα: κάθε <li> είναι μία κουκκίδα -->
+        <ul>
+          <li>Βοήθεια σε φοιτητές (BSc, MSc, PhD) να ολοκληρώσουν τη διπλωματική ή τη διατριβή τους.</li>
+          <li>Καθοδήγηση ανεξάρτητων ερευνητών στον σχεδιασμό και στη δημοσίευση των ιδεών τους.</li>
+          <li>Πρακτική εκπαίδευση σε σύγχρονα ερευνητικά εργαλεία.</li>
+        </ul>
+        <!-- ===== ΠΡΟΣΩΡΙΝΟ ΚΕΙΜΕΝΟ =====
+             Όταν έχεις περιεχόμενο, σβήσε το πλαίσιο "notice" πιο κάτω
+             και γράψε εδώ τις παραγράφους σου (<p>…</p>). -->
+        <div class="notice">
+          <b>Σύντομα</b>
+          <span>Η σελίδα ετοιμάζεται. Για πληροφορίες: <a href="mailto:info@noes.gr">info@noes.gr</a></span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Υποσέλιδο: το γεμίζει αυτόματα το assets/site.js -->
+  <footer id="site-footer"></footer>
+  <script src="../assets/site.js"></script>
+</body>
+</html>

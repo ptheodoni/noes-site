@@ -1,0 +1,79 @@
+<!doctype html>
+<!--
+  =====================================================================
+  ΣΕΛΙΔΑ: Σχετικά — Νόες
+  Αρχείο: sxetika/index.html  (η διεύθυνση είναι noes.gr/sxetika/)
+
+  ΠΩΣ ΤΗΝ ΑΛΛΑΖΕΙΣ
+  - Άλλαξε μόνο το κείμενο ανάμεσα στο <main> και στο </main>.
+  - Η κεφαλίδα (λογότυπο, μενού) και το υποσέλιδο μπαίνουν αυτόματα
+    από το assets/site.js — δεν τα γράφεις εδώ.
+  - Χρώματα/γραμματοσειρές: assets/style.css (μπλοκ :root).
+  - <p>…</p> = παράγραφος, <h2>…</h2> = υπότιτλος,
+    <a href="…">…</a> = σύνδεσμος, <b>…</b> = έντονα.
+  =====================================================================
+-->
+<html lang="el" data-root="../" data-page="sxetika">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- Ο τίτλος στην καρτέλα του browser και στη Google -->
+  <title>Σχετικά — Νόες</title>
+  <!-- Η περιγραφή που δείχνει η Google κάτω από τον τίτλο -->
+  <meta name="description" content="Το όραμα, οι πυλώνες και η ιδρύτρια των Νόων.">
+  <!-- Η ίδια σελίδα στην άλλη γλώσσα (για το κουμπί English/Ελληνικά) -->
+  <meta name="alt-lang" content="en/about/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=IBM+Plex+Sans:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="icon" href="../images/favicon.png">
+</head>
+<body>
+  <!-- Κεφαλίδα: τη γεμίζει αυτόματα το assets/site.js -->
+  <header id="site-header"></header>
+
+  <main>
+    <div class="wrap">
+      <div class="text">
+        <p class="eyebrow">Σχετικά</p>
+
+        <!-- ===== ΤΟ ΟΡΑΜΑ ===== -->
+        <h1>Το Όραμά μας</h1>
+        <p class="lead">Οι Νόες είναι μια επιστημονική και φιλοσοφική πρωτοβουλία που φιλοδοξεί να κλείσει την απόσταση ανάμεσα στην ακαδημαϊκή έρευνα και την κοινωνία.</p>
+        <p>Πιστεύουμε ότι η επιστήμη και η φιλοσοφία δεν πρέπει να μένουν κλεισμένες στα πανεπιστήμια. Στόχος μας είναι να προσφέρουμε τα κατάλληλα εργαλεία ώστε ο καθένας να τις προσεγγίσει στο πραγματικό τους βάθος — χωρίς να τις υπεραπλουστεύουμε.</p>
+
+        <!-- ===== ΟΙ ΠΥΛΩΝΕΣ ===== -->
+        <h2>Οι Πυλώνες μας</h2>
+        <h3><a href="../ekdoseis/">Εκδόσεις</a></h3>
+        <p>Συγγραφή και έκδοση επιστημονικών και φιλοσοφικών συγγραμμάτων.</p>
+        <h3><a href="../seminaria/">Σεμινάρια</a></h3>
+        <p>Οργάνωση διαδραστικών και δια ζώσης σεμιναρίων.</p>
+        <h3><a href="../ereuna/">Ερευνητική Καθοδήγηση</a></h3>
+        <p>Ένα πρωτοποριακό μοντέλο ακαδημαϊκού mentorship: βοηθάμε φοιτητές (BSc, MSc, PhD) να ολοκληρώσουν τις εργασίες τους, καθοδηγούμε ανεξάρτητους ερευνητές να σχεδιάσουν και να δημοσιεύσουν τις ιδέες τους, και προσφέρουμε πρακτική εκπαίδευση σε σύγχρονα ερευνητικά εργαλεία.</p>
+        <h3><a href="../symvouleftiki/">Συμβουλευτική</a></h3>
+        <p>Εξειδικευμένες συμβουλευτικές υπηρεσίες που συνδέουν τη γνωσιακή επιστήμη με την πράξη.</p>
+
+        <!-- ===== Η ΙΔΡΥΤΡΙΑ =====
+             Το id="idrytria" επιτρέπει σύνδεσμο κατευθείαν εδώ: sxetika/#idrytria -->
+        <h2 id="idrytria">Η Ιδρύτρια</h2>
+        <!-- Φωτογραφία: βάλε το αρχείο στο images/ με όνομα theodoni.jpg -->
+        <div class="figure" style="max-width:260px;margin-bottom:20px">
+          <img src="../images/theodoni.jpg" alt="Δρ. Παναγιώτα Θεοδώνη" loading="lazy" onerror="this.closest('.figure').hidden=true">
+        </div>
+        <p>Ιδρύτρια των «Νόων» και Κύρια Ερευνήτρια του Theodoni Lab είναι η <a href="https://ptheodoni.github.io/">Δρ. Παναγιώτα Θεοδώνη</a>.</p>
+        <p>Έχει υπόβαθρο στη Φυσική και στη Θεωρητική και Υπολογιστική Νευροεπιστήμη, καθώς και μεταπτυχιακές σπουδές στη Φιλοσοφία. Έχει εργαστεί στο Πανεπιστήμιο Αθηνών, στο ΕΚΕΦΕ «Δημόκριτος», στο Pompeu Fabra University, στο Centre de Recerca Matemàtica, στο NYU Shanghai, στο ECNU Shanghai και στο NYU (Center for Neural Science και Department of Philosophy).</p>
+        <p>Αφού επέβλεψε φοιτητές στο ΕΚΠΑ και στο NYU, αποφάσισε να δημιουργήσει έναν ανεξάρτητο χώρο για ερευνητική καθοδήγηση με επίκεντρο τον άνθρωπο.</p>
+
+        <!-- ===== ΕΠΙΚΟΙΝΩΝΙΑ ===== -->
+        <h2>Επικοινωνία</h2>
+        <p><a href="mailto:info@noes.gr">info@noes.gr</a></p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Υποσέλιδο: το γεμίζει αυτόματα το assets/site.js -->
+  <footer id="site-footer"></footer>
+  <script src="../assets/site.js"></script>
+</body>
+</html>
