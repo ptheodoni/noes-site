@@ -133,7 +133,6 @@ main .wrap { padding-block: 56px 88px; }
 /* ---------- Ζώνη τίτλου στις εσωτερικές σελίδες ----------
    Σκούρο μπλε με τον τίτλο της σελίδας — ίδιο ύφος με την αρχική. */
 .page-head { background: var(--navy-deep); color: #fff; position: relative; overflow: hidden; }
-.page-head::before { content: ""; position: absolute; inset: 0; background: radial-gradient(60% 120% at 85% 0%, rgba(236, 202, 99, .16), transparent 60%), radial-gradient(50% 100% at 0% 100%, rgba(120, 160, 255, .14), transparent 60%); pointer-events: none; }
 .page-head .wrap { position: relative; padding-block: clamp(48px, 8vw, 88px) clamp(40px, 6vw, 64px); }
 .page-head h1 { color: #fff; margin-bottom: .25em; max-width: 22ch; }
 .page-head .eyebrow { color: var(--gold-bright); }
@@ -146,8 +145,6 @@ main .wrap { padding-block: 56px 88px; }
   margin-left: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); margin-right: calc(-1 * max(16px, env(safe-area-inset-right, 0px)));
   padding: clamp(48px, 9vh, 110px) max(16px, env(safe-area-inset-right, 0px)) 40px max(16px, env(safe-area-inset-left, 0px));
   min-height: calc(100svh - 63px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: clamp(18px, 3.6vh, 40px); }
-/* απαλή λάμψη πίσω από το λογότυπο */
-.hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(38% 45% at 38% 42%, rgba(236, 202, 99, .08), transparent 70%); pointer-events: none; }
 .hero > * { position: relative; }
 .hero .logo-box { width: clamp(140px, 19vw, 220px); aspect-ratio: 1; max-width: 100%; background: #fff; border-radius: 28px; overflow: hidden; box-shadow: 0 20px 60px rgba(0, 0, 0, .35), 0 0 0 1px rgba(255, 255, 255, .4); }
 .hero .logo-box img { width: 100%; height: 100%; object-fit: cover; }
