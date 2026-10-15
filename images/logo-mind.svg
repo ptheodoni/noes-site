@@ -36,16 +36,16 @@
     </mask>
     <mask id="noHole" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="250">
       <rect width="200" height="250" fill="#fff"/>
-      <circle cx="88" cy="125" r="22.0" fill="#000"/>
+      <circle cx="86" cy="121" r="28.6" fill="#000"/>
     </mask>
-    <clipPath id="inHole"><circle cx="88" cy="125" r="20"/></clipPath>
+    <clipPath id="inHole"><circle cx="86" cy="121" r="26"/></clipPath>
   </defs>
   <g fill="#ffffff">
     <!-- ο εγκέφαλος, χωρίς το κομμάτι -->
     <g mask="url(#noHole)"><use href="#brain" mask="url(#cut)"/></g>
     <!-- το εγκεφαλικό στέλεχος -->
-    <path d="M125 116 C130 142 118 154 118 174" fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="round"/>
+    <path d="M126 114 C131 140 118 152 118 172" fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="round"/>
     <!-- η τελεία = το κομμάτι που έπεσε -->
-    <g transform="translate(29 86) rotate(16 88 125)"><g clip-path="url(#inHole)"><use href="#brain" mask="url(#cut)"/></g></g>
+    <g transform="translate(31 93) rotate(16 86 121)"><g clip-path="url(#inHole)"><use href="#brain" mask="url(#cut)"/></g></g>
   </g>
 </svg>
