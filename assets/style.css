@@ -143,8 +143,8 @@ main .wrap { padding-block: 56px 88px; }
    Πιάνει όλο το πλάτος και σχεδόν όλο το ύψος της οθόνης. */
 .hero { background: var(--navy-deep); color: #fff; text-align: center; position: relative; overflow: hidden;
   margin-left: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); margin-right: calc(-1 * max(16px, env(safe-area-inset-right, 0px)));
-  padding: clamp(48px, 9vh, 110px) max(16px, env(safe-area-inset-right, 0px)) 40px max(16px, env(safe-area-inset-left, 0px));
-  min-height: calc(100svh - 63px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: clamp(18px, 3.6vh, 40px); }
+  padding: clamp(56px, 12vh, 140px) max(16px, env(safe-area-inset-right, 0px)) clamp(32px, 6vh, 64px) max(16px, env(safe-area-inset-left, 0px));
+  min-height: 100svh;  /* γεμίζει όλη την οθόνη: δεν φαίνεται η επόμενη ενότητα */ display: flex; flex-direction: column; align-items: center; justify-content: center; gap: clamp(18px, 3.6vh, 40px); }
 .hero > * { position: relative; }
 .hero .logo-box { width: clamp(140px, 19vw, 220px); aspect-ratio: 1; max-width: 100%; background: #fff; border-radius: 28px; overflow: hidden; box-shadow: 0 20px 60px rgba(0, 0, 0, .35), 0 0 0 1px rgba(255, 255, 255, .4); }
 .hero .logo-box img { width: 100%; height: 100%; object-fit: cover; }
@@ -245,7 +245,7 @@ html[data-page="home"] .site-footer { border-top-color: rgba(255, 255, 255, .12)
 .hero.split .hero-in { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: clamp(24px, 4vw, 64px); max-width: 1240px; width: 100%; }
 .hero .mind { width: clamp(64px, 7.5vw, 110px); height: auto; justify-self: end;  /* μέγεθος λογότυπου */
   margin-right: clamp(-30px, -1.5vw, 0px);  /* απόσταση από το ΝΟΕΣ (μεγαλύτερο = πιο αριστερά) */
-  transform: translateY(-100%); }         /* πόσο πιο ψηλά από το κέντρο */
+  transform: translateY(-125%); }         /* πόσο πιο ψηλά από το κέντρο */
 @media (max-width: 720px) { .hero .mind { justify-self: center; margin-right: 0; transform: none; } }
 .hero .mind.boxed { background: #fff; border-radius: 28px; padding: 18px; }
 .hero.split .hero-text { display: flex; flex-direction: column; align-items: center; gap: clamp(16px, 3vh, 30px); text-align: center; }
