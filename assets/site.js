@@ -22,7 +22,10 @@
         { id: "artemis", label: "Open-air Seminar on Artemis", href: "seminaria/artemis/" },
         { id: "anoia", label: "Κατανοώντας την Άνοια", href: "seminaria/anoia/" }
       ] },
-      { id: "ereuna", label: "Έρευνα", href: "ereuna/" },
+      { id: "ereuna", label: "Έρευνα", href: "ereuna/", sub: [
+        { id: "ereuna", label: "Όλες οι δραστηριότητες", href: "ereuna/" },
+        { id: "theodoni-lab", label: "Theodoni Lab", href: "ereuna/theodoni-lab/" }
+      ] },
       { id: "symvouleftiki", label: "Συμβουλευτική", href: "symvouleftiki/" },
       { id: "dimiourgies", label: "Δημιουργίες", href: "dimiourgies/" },
       { id: "sxetika", label: "Σχετικά", href: "sxetika/" }
@@ -34,7 +37,10 @@
         { id: "artemis", label: "Open-air Seminar on Artemis", href: "en/seminars/artemis/" },
         { id: "dementia", label: "Understanding Dementia", href: "en/seminars/dementia/" }
       ] },
-      { id: "research", label: "Research", href: "en/research/" },
+      { id: "research", label: "Research", href: "en/research/", sub: [
+        { id: "research", label: "All activities", href: "en/research/" },
+        { id: "theodoni-lab", label: "Theodoni Lab", href: "en/research/theodoni-lab/" }
+      ] },
       { id: "consulting", label: "Consulting", href: "en/consulting/" },
       { id: "creations", label: "Creations", href: "en/creations/" },
       { id: "about", label: "About", href: "en/about/" }

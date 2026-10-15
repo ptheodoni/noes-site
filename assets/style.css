@@ -284,7 +284,7 @@ main h2 a:hover { text-decoration: underline; }
 .card .lab-list { margin: 4px 0 0; padding-left: 1.2em; color: var(--muted); font-size: .97rem; }
 .card .invite { background: var(--navy-soft); border-radius: 12px; padding: 12px 14px; margin-top: 8px; color: var(--ink); }
 main h2[id] { scroll-margin-top: 90px; margin-top: 2.2em; }
-main .wrap > h2[id]:first-child { margin-top: 0; }
+main .wrap > h2[id]:first-child, main .wrap > .text:first-child > h2[id]:first-child { margin-top: 0; }
 
 /* ---------- Σελίδα «Συμβουλευτική»: κάρτα συμβούλου και θέματα ---------- */
 .cards.people { grid-template-columns: 1fr; max-width: 760px; margin-top: 36px; }
