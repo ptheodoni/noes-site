@@ -27,7 +27,11 @@
         { id: "theodoni-lab", label: "Theodoni Lab", href: "ereuna/theodoni-lab/" }
       ] },
       { id: "symvouleftiki", label: "Συμβουλευτική", href: "symvouleftiki/" },
-      { id: "dimiourgies", label: "Δημιουργίες", href: "dimiourgies/" },
+      { id: "dimiourgies", label: "Δημιουργίες", href: "dimiourgies/", sub: [
+        { id: "dimiourgies", label: "Όλες οι δημιουργίες", href: "dimiourgies/" },
+        { id: "femme", label: "FemMe Radio ↗", href: "https://www.femme-radio.gr" },
+        { id: "logoplex", label: "Logoplex", href: "dimiourgies/logoplex/" }
+      ] },
       { id: "sxetika", label: "Σχετικά", href: "sxetika/" }
     ],
     en: [
@@ -42,7 +46,11 @@
         { id: "theodoni-lab", label: "Theodoni Lab", href: "en/research/theodoni-lab/" }
       ] },
       { id: "consulting", label: "Consulting", href: "en/consulting/" },
-      { id: "creations", label: "Creations", href: "en/creations/" },
+      { id: "creations", label: "Creations", href: "en/creations/", sub: [
+        { id: "creations", label: "All creations", href: "en/creations/" },
+        { id: "femme", label: "FemMe Radio ↗", href: "https://www.femme-radio.gr" },
+        { id: "logoplex", label: "Logoplex", href: "en/creations/logoplex/" }
+      ] },
       { id: "about", label: "About", href: "en/about/" }
     ]
   };
@@ -59,6 +67,8 @@
 
   function link(item) {
     var cur = item.id === HERE ? ' aria-current="page"' : "";
+    // Σύνδεσμος προς άλλο site (ξεκινά με http): ανοίγει σε νέα καρτέλα
+    if (/^https?:/.test(item.href)) return '<a href="' + item.href + '" target="_blank" rel="noopener">' + item.label + "</a>";
     return '<a href="' + ROOT + item.href + '"' + cur + ">" + item.label + "</a>";
   }
   // Ανάμεσα στα στοιχεία του μενού μπαίνει τελεία «•»· πριν από το τελευταίο
@@ -89,6 +99,15 @@
   }
   var foot = document.getElementById("site-footer");
   if (foot) { foot.className = "site-footer"; foot.innerHTML = '<div class="wrap"><span>' + FOOTER[LANG] + "</span></div>"; }
+
+  // Σε υπολογιστή (με ποντίκι) το υπομενού ανοίγει μόλις περάσει το ποντίκι από πάνω
+  if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    document.querySelectorAll(".nav details").forEach(function (d) {
+      var t;
+      d.addEventListener("mouseenter", function () { clearTimeout(t); if (window.innerWidth > 860) d.setAttribute("open", ""); });
+      d.addEventListener("mouseleave", function () { t = setTimeout(function () { if (window.innerWidth > 860) d.removeAttribute("open"); }, 200); });
+    });
+  }
 
   // Κλείνει το υπομενού όταν πατάς έξω από αυτό
   document.addEventListener("click", function (e) {

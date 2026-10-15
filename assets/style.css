@@ -114,6 +114,15 @@ li { margin-bottom: .4em; }
 .lang a { color: var(--head-ink); text-decoration: none; opacity: .55; }
 .lang a:hover { opacity: 1; }
 .lang b { font-weight: 600; }
+/* Υπομενού: βελάκι ▾ δίπλα σε «Σεμινάρια» / «Έρευνα», ανοίγει και με το ποντίκι (hover) */
+.nav summary::after { content: ""; display: inline-block; width: .38em; height: .38em; margin-left: .45em;
+  border-right: 1.6px solid currentColor; border-bottom: 1.6px solid currentColor;
+  transform: translateY(-.22em) rotate(45deg); opacity: .6; transition: transform .2s; }
+.nav details[open] summary::after { transform: translateY(.05em) rotate(-135deg); }
+.nav details:has([aria-current="page"]) summary { border-bottom-color: var(--gold-bright); }  /* υπογράμμιση όταν είσαι σε υποσελίδα */
+@media (hover: hover) and (pointer: fine) and (min-width: 861px) {
+  .nav .sub::before { content: ""; position: absolute; left: 0; right: 0; top: -14px; height: 14px; }  /* «γέφυρα» για να μην κλείνει όσο κατεβαίνει το ποντίκι */
+}
 @media (max-width: 860px) {
   .site-header { position: static; }
   .site-header .wrap { grid-template-columns: 1fr auto; }
