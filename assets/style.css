@@ -271,3 +271,5 @@ main h2 a:hover { text-decoration: underline; }
 /* Αρχική: πολλές ανακοινώσεις «Νέο!» η μία κάτω από την άλλη */
 .notices { display: grid; gap: 10px; margin-block: 8px 20px; }
 .notices .notice { margin: 0; }
+/* Αρχική — οθόνη «Δημιουργίες»: περιεχόμενο πιο ψηλά (μικρότερο νούμερο = πιο ψηλά) */
+#dimiourgies, #creations { justify-content: flex-start; padding-top: clamp(56px, 12vh, 130px); }
