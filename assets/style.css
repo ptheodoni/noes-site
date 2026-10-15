@@ -322,3 +322,9 @@ main .wrap > h2[id]:first-child, main .wrap > .text:first-child > h2[id]:first-c
 .creation.idea { background: var(--navy-soft); border: 1.5px dashed color-mix(in srgb, var(--gold-bright) 75%, var(--line)); box-shadow: none; }
 .creation .idea-mark { font: 400 50px/1 var(--display); color: var(--gold-bright); }
 @media (max-width: 600px) { .creation { grid-template-columns: 1fr; padding: 24px 22px; } .creation-icon { width: 60px; height: 60px; font-size: 28px; border-radius: 18px; } }
+
+/* Ανακοινώσεις αρχικής: ο σύνδεσμος «Δημιουργίες ›» μπροστά από το κείμενο */
+.notice a.crumb { font-weight: 600; text-decoration: none; }
+.notice a.crumb:hover { text-decoration: underline; }
+.notice > span { flex: 1 1 300px; }      /* το κείμενο πιάνει τον χώρο και αναδιπλώνεται μέσα στη δική του στήλη */
+.notice > a { white-space: nowrap; }
