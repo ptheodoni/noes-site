@@ -25,12 +25,18 @@
   <header id="site-header"></header>
 
   <main>
+    <div class="wrap">
     <!-- Η μεγάλη μπλε ζώνη (hero) — λογότυπο: images/logo.png -->
-    <section class="hero">
-      <div class="logo-box"><img src="../images/logo.png" alt="The Noes logo"></div>
-      <h1>N<span class="rest">OES</span></h1>
-      <a class="alt" href="../" lang="el">Ν<span class="rest">ΟΕΣ</span></a>
-      <a class="vision" href="about/">Learn about our vision</a>
+    <section class="hero split">
+      <div class="hero-in">
+        <!-- Λογότυπο: images/logo-mind.svg -->
+        <img class="mind" src="../images/logo-mind.svg" alt="A brain shaped like a question mark: its missing piece has fallen to form the dot" width="200" height="240">
+        <div class="hero-text">
+          <h1>N<span class="rest">OES</span></h1>
+          <a class="alt" href="../" lang="el">Ν<span class="rest">ΟΕΣ</span></a>
+          <a class="vision" href="about/">Learn about our vision</a>
+        </div>
+      </div>
       <a class="down" href="#pillars" aria-label="Continue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M5 12l7 7 7-7"/></svg></a>
     </section>
 
@@ -90,6 +96,7 @@
         </div>
       </div>
     </section>
+    </div>
   </main>
 
   <!-- Υποσέλιδο: το γεμίζει αυτόματα το assets/site.js -->

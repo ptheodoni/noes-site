@@ -34,16 +34,21 @@
   <header id="site-header"></header>
 
   <main>
+    <div class="wrap">
     <!-- ===== Η ΜΕΓΑΛΗ ΜΠΛΕ ΖΩΝΗ (hero) =====
-         Λογότυπο, ΝΟΕΣ, NOES, σύνδεσμος για το όραμα και βελάκι προς τα κάτω.
-         Το λογότυπο είναι το αρχείο images/logo.png — άλλαξέ το εκεί. -->
-    <section class="hero">
-      <div class="logo-box"><img src="images/logo.png" alt="Το λογότυπο των Νόων"></div>
-      <h1>Ν<span class="rest">ΟΕΣ</span></h1>
-      <!-- Το χρυσό «NOES» οδηγεί στην αγγλική εκδοχή -->
-      <a class="alt" href="en/" lang="en">N<span class="rest">OES</span></a>
-      <a class="vision" href="sxetika/">Μάθετε για το όραμά μας</a>
-      <!-- Το βελάκι κατεβαίνει στους πυλώνες (#pylones) -->
+         Αριστερά το λογότυπο, δεξιά ΝΟΕΣ / NOES / κουμπί για το όραμα, κάτω βελάκι. -->
+    <section class="hero split">
+      <div class="hero-in">
+        <!-- Λογότυπο: images/logo-mind.svg. Για το παλιό λογότυπο βάλε src="images/logo.png" και class="mind boxed" -->
+        <img class="mind" src="images/logo-mind.svg" alt="Εγκέφαλος σε σχήμα ερωτηματικού: το κομμάτι που λείπει έχει πέσει και γίνεται η τελεία" width="200" height="240">
+        <div class="hero-text">
+          <h1>Ν<span class="rest">ΟΕΣ</span></h1>
+          <!-- Το χρυσό «NOES» οδηγεί στην αγγλική εκδοχή -->
+          <a class="alt" href="en/" lang="en">N<span class="rest">OES</span></a>
+          <a class="vision" href="sxetika/">Μάθετε για το όραμά μας</a>
+          <!-- Το βελάκι κατεβαίνει στους πυλώνες (#pylones) -->
+        </div>
+      </div>
       <a class="down" href="#pylones" aria-label="Συνέχεια"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M5 12l7 7 7-7"/></svg></a>
     </section>
 
@@ -103,6 +108,7 @@
         </div>
       </div>
     </section>
+    </div>
   </main>
 
   <!-- Υποσέλιδο: το γεμίζει αυτόματα το assets/site.js -->

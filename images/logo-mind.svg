@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Λογότυπο «νους-ερωτηματικό»: λευκό περίγραμμα εγκεφάλου που σχηματίζει «?», χρυσές έλικες. Του λείπει ένα κομμάτι, που έχει πέσει κάτω και γίνεται η τελεία του ερωτηματικού.
+       Χρώματα: λευκό #ffffff και χρυσό #ecca63 — άλλαξέ τα εδώ αν θέλεις. -->
+  <path d="M57 106 C40 102 30 84 37 66 C40 44 60 28 84 29 C99 15 129 16 142 31 C165 33 179 53 173 75 C183 94 170 114 150 116 C141 128 124 130 113 121 A28.5 28.5 0 1 0 57 106 Z" stroke="#ffffff" stroke-width="6"/>
+  <path d="M68 52 C82 42 98 60 114 47" stroke="#ecca63" stroke-width="4"/>
+  <path d="M128 40 C146 48 138 68 158 72" stroke="#ecca63" stroke-width="4"/>
+  <path d="M121 78 C131 94 147 86 153 101" stroke="#ecca63" stroke-width="4"/>
+  <path d="M50 80 C58 70 70 74 76 66" stroke="#ecca63" stroke-width="4"/>
+  <path d="M117 124 C121 142 111 151 111 168" stroke="#ffffff" stroke-width="6"/>
+  <!-- Η «τελεία»: το κομμάτι που έλειψε από τον εγκέφαλο και έπεσε κάτω -->
+  <g transform="rotate(-18 111 202)">
+    <circle cx="111" cy="202" r="16" stroke="#ffffff" stroke-width="6"/>
+    <path d="M100 204 C106 196 114 210 122 200" stroke="#ecca63" stroke-width="4"/>
+  </g>
+</svg>

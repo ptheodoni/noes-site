@@ -147,7 +147,7 @@ main .wrap { padding-block: 56px 88px; }
   padding: clamp(48px, 9vh, 110px) max(16px, env(safe-area-inset-right, 0px)) 40px max(16px, env(safe-area-inset-left, 0px));
   min-height: calc(100svh - 63px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: clamp(18px, 3.6vh, 40px); }
 /* απαλή λάμψη πίσω από το λογότυπο */
-.hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(42% 46% at 50% 30%, rgba(236, 202, 99, .13), transparent 70%); pointer-events: none; }
+.hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(38% 45% at 38% 42%, rgba(236, 202, 99, .08), transparent 70%); pointer-events: none; }
 .hero > * { position: relative; }
 .hero .logo-box { width: clamp(140px, 19vw, 220px); aspect-ratio: 1; max-width: 100%; background: #fff; border-radius: 28px; overflow: hidden; box-shadow: 0 20px 60px rgba(0, 0, 0, .35), 0 0 0 1px rgba(255, 255, 255, .4); }
 .hero .logo-box img { width: 100%; height: 100%; object-fit: cover; }
@@ -211,7 +211,7 @@ html[data-page="home"] { scroll-snap-type: y proximity; }
 .screen .down { width: 50px; height: 50px; border-radius: 50%; background: rgba(255, 255, 255, .9); color: var(--navy-deep); display: grid; place-items: center; text-decoration: none; animation: bob 2.4s ease-in-out infinite; }
 .screen .down svg { width: 26px; height: 26px; }
 html[data-page="home"] .screen .down { color: var(--navy-deep); }
-@media (max-width: 860px) { .screen { min-height: 100svh; scroll-margin-top: 0; } }
+@media (max-width: 860px) { .screen { min-height: 100svh; scroll-margin-top: 0; } html[data-page="home"] { scroll-snap-type: none; } }
 html[data-page="home"] main h2 { color: #fff; }
 html[data-page="home"] main a { color: var(--gold-bright); }
 html[data-page="home"] .hero a.vision { color: rgba(255, 255, 255, .88); }
@@ -241,3 +241,14 @@ html[data-page="home"] .site-footer { border-top-color: rgba(255, 255, 255, .12)
 /* Αρχική — οθόνη «Δημιουργίες»: τίτλος και κουτιά στο κέντρο */
 .screen .cards.two-up { margin-inline: auto; }
 #dimiourgies h2, #creations h2 { text-align: center; }
+
+/* ---------- Αρχική: λογότυπο αριστερά, τίτλος δεξιά ----------
+   (class="hero split"). Στο κινητό μπαίνουν το ένα κάτω από το άλλο. */
+.hero.split .hero-in { display: grid; grid-template-columns: auto auto; align-items: center; justify-content: center; gap: clamp(28px, 6vw, 96px); max-width: var(--wide); width: 100%; }
+.hero .mind { width: clamp(170px, 24vw, 300px); height: auto; }
+.hero .mind.boxed { background: #fff; border-radius: 28px; padding: 18px; }
+.hero.split .hero-text { display: flex; flex-direction: column; align-items: flex-start; gap: clamp(16px, 3vh, 30px); text-align: left; }
+@media (max-width: 720px) {
+  .hero.split .hero-in { grid-template-columns: 1fr; justify-items: center; }
+  .hero.split .hero-text { align-items: center; text-align: center; }
+}
