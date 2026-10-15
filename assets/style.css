@@ -341,7 +341,10 @@ html[data-page="home"] .site-footer a:hover { color: #fff; }
 .statement-box .closing { font-style: italic; }
 @media (max-width: 600px) { .statement-box { padding: 24px 20px 16px; } }
 
-/* ---------- Έρευνα: κουτί «Το δικό σας εργαστήριο» (πρόσκληση με φόρμα) ---------- */
-.card.lab-invite { background: var(--navy-soft); border: 1.5px dashed color-mix(in srgb, var(--gold-bright) 75%, var(--line)); border-top-width: 1.5px; box-shadow: none; overflow: hidden; }
-.card.lab-invite .idea-mark { position: absolute; right: 20px; top: 2px; font: 300 90px/1 var(--display); color: var(--gold-bright); opacity: .6; pointer-events: none; }
-.cards.labs { max-width: 1120px; }
+/* ---------- Έρευνα: κουτί «Το δικό σας εργαστήριο» (πρόσκληση με φόρμα) ----------
+   Τα εργαστήρια μπαίνουν το ένα κάτω από το άλλο· η πρόσκληση είναι τελευταία. */
+.cards.labs { grid-template-columns: 1fr; max-width: 860px; }
+.card.lab-invite { background: var(--navy-soft); border: 1.5px dashed color-mix(in srgb, var(--gold-bright) 75%, var(--line)); border-top-width: 1.5px; box-shadow: none; padding-right: 110px; }
+.card.lab-invite .lab-icon { position: absolute; right: 24px; top: 24px; width: 64px; height: 64px; border-radius: 18px; background: var(--navy-deep); color: var(--gold-bright); display: grid; place-items: center; }
+.card.lab-invite .lab-icon svg { width: 60%; height: 60%; }  /* μέγεθος φιάλης */
+@media (max-width: 600px) { .card.lab-invite { padding-right: 24px; padding-top: 100px; } .card.lab-invite .lab-icon { left: 24px; right: auto; } }
