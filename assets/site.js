@@ -20,17 +20,20 @@
       { id: "seminaria", label: "Σεμινάρια", href: "seminaria/", sub: [
         { id: "seminaria", label: "Όλα τα σεμινάρια", href: "seminaria/" },
         { id: "artemis", label: "Open-air Seminar on Artemis", href: "seminaria/artemis/" },
-        { id: "anoia", label: "Κατανοώντας την Άνοια", href: "seminaria/anoia/" }
+        { id: "anoia", label: "Κατανοώντας την Άνοια", href: "seminaria/anoia/" },
+        { id: "call-seminar", label: "Δώσε το δικό σου σεμινάριο", href: "seminaria/#protasi", cls: "call" }
       ] },
       { id: "ereuna", label: "Έρευνα", href: "ereuna/", sub: [
         { id: "ereuna", label: "Όλες οι δραστηριότητες", href: "ereuna/" },
-        { id: "theodoni-lab", label: "Theodoni Lab", href: "ereuna/theodoni-lab/" }
+        { id: "theodoni-lab", label: "Theodoni Lab", href: "ereuna/theodoni-lab/" },
+        { id: "call-lab", label: "Το δικό σου εργαστήριο στους Νόες", href: "ereuna/#neo-ergastirio", cls: "call" }
       ] },
       { id: "symvouleftiki", label: "Συμβουλευτική", href: "symvouleftiki/" },
       { id: "dimiourgies", label: "Δημιουργίες", href: "dimiourgies/", sub: [
         { id: "dimiourgies", label: "Όλες οι δημιουργίες", href: "dimiourgies/" },
         { id: "femme", label: "FemMe Radio ↗", href: "https://www.femme-radio.gr" },
-        { id: "logoplex", label: "Logoplex", href: "dimiourgies/logoplex/" }
+        { id: "logoplex", label: "Logoplex", href: "dimiourgies/logoplex/" },
+        { id: "call-idea", label: "Έχεις μια ιδέα;", href: "dimiourgies/#idea", cls: "call" }
       ] },
       { id: "sxetika", label: "Σχετικά", href: "sxetika/" }
     ],
@@ -39,17 +42,20 @@
       { id: "seminars", label: "Seminars", href: "en/seminars/", sub: [
         { id: "seminars", label: "All seminars", href: "en/seminars/" },
         { id: "artemis", label: "Open-air Seminar on Artemis", href: "en/seminars/artemis/" },
-        { id: "dementia", label: "Understanding Dementia", href: "en/seminars/dementia/" }
+        { id: "dementia", label: "Understanding Dementia", href: "en/seminars/dementia/" },
+        { id: "call-seminar", label: "Give your own seminar", href: "en/seminars/#proposal", cls: "call" }
       ] },
       { id: "research", label: "Research", href: "en/research/", sub: [
         { id: "research", label: "All activities", href: "en/research/" },
-        { id: "theodoni-lab", label: "Theodoni Lab", href: "en/research/theodoni-lab/" }
+        { id: "theodoni-lab", label: "Theodoni Lab", href: "en/research/theodoni-lab/" },
+        { id: "call-lab", label: "Your own lab at Noes", href: "en/research/#new-lab", cls: "call" }
       ] },
       { id: "consulting", label: "Consulting", href: "en/consulting/" },
       { id: "creations", label: "Creations", href: "en/creations/", sub: [
         { id: "creations", label: "All creations", href: "en/creations/" },
         { id: "femme", label: "FemMe Radio ↗", href: "https://www.femme-radio.gr" },
-        { id: "logoplex", label: "Logoplex", href: "en/creations/logoplex/" }
+        { id: "logoplex", label: "Logoplex", href: "en/creations/logoplex/" },
+        { id: "call-idea", label: "Have an idea?", href: "en/creations/#idea", cls: "call" }
       ] },
       { id: "about", label: "About", href: "en/about/" }
     ]
@@ -69,7 +75,9 @@
     var cur = item.id === HERE ? ' aria-current="page"' : "";
     // Σύνδεσμος προς άλλο site (ξεκινά με http): ανοίγει σε νέα καρτέλα
     if (/^https?:/.test(item.href)) return '<a href="' + item.href + '" target="_blank" rel="noopener">' + item.label + "</a>";
-    return '<a href="' + ROOT + item.href + '"' + cur + ">" + item.label + "</a>";
+    // cls: "call" = κάλεσμα συμμετοχής (εμφανίζεται χωριστά, με χρυσό χρώμα, στο τέλος του υπομενού)
+    var cls = item.cls ? ' class="' + item.cls + '"' : "";
+    return '<a href="' + ROOT + item.href + '"' + cls + cur + ">" + item.label + "</a>";
   }
   // Ανάμεσα στα στοιχεία του μενού μπαίνει τελεία «•»· πριν από το τελευταίο
   // (Σχετικά / About) μπαίνει κάθετη γραμμή «|», όπως στο παλιό site.
