@@ -354,3 +354,12 @@ html[data-page="home"] .site-footer a:hover { color: #fff; }
 .nav .sub a.call::before { content: "＋ "; }
 .nav .sub a { white-space: nowrap; }
 #protasi, #neo-ergastirio, #idea, #proposal, #new-lab { scroll-margin-top: 100px; }   /* ώστε η κεφαλίδα να μην κρύβει την κάρτα */
+
+/* ---------- Logoplex: μεγάλο κουτί «Όλες οι γλώσσες» → logoplex.app ---------- */
+.feature-link { display: grid; gap: 8px; margin-top: 36px; padding: 34px 36px; border-radius: var(--radius); background: var(--navy-deep); color: #fff; text-decoration: none; box-shadow: var(--shadow); transition: transform .2s, box-shadow .2s; }
+.feature-link:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+.feature-link .meta { font: 600 13px/1.4 var(--ui); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-bright); }
+.feature-link .feature-title { font: 400 clamp(2rem, 4vw, 2.8rem)/1.1 var(--display); }
+.feature-link .feature-body { font-size: 1.1rem; color: rgba(255, 255, 255, .78); max-width: 60ch; }
+.feature-link .feature-cta { justify-self: start; margin-top: 10px; font: 600 16px/1 var(--ui); background: var(--gold-bright); color: var(--navy-deep); padding: 13px 22px; border-radius: 999px; }
+.sub-h { margin-top: 2.2em; }
