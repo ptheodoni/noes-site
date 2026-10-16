@@ -17,8 +17,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Tinos:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Roboto:wght@400;500&display=swap">
-  <link rel="stylesheet" href="../../assets/style.css?v=20261016f">
-  <link rel="icon" href="../../images/favicon.png?v=20261016f">
+  <link rel="stylesheet" href="../../assets/style.css?v=20261016g">
+  <link rel="icon" href="../../images/favicon.png?v=20261016g">
 </head>
 <body>
   <!-- Κεφαλίδα: τη γεμίζει αυτόματα το assets/site.js -->
@@ -26,7 +26,7 @@
 
   <main>
     <!-- ===== ΖΩΝΗ ΤΙΤΛΟΥ (σκούρο μπλε): μικρή ετικέτα, τίτλος, υπότιτλος ===== -->
-    <section class="page-head bleed"><div class="wrap">
+    <section class="page-head bleed" id="vision"><div class="wrap">
       <p class="eyebrow">About</p>
       <h1>Our Vision</h1>
       <p class="lead">Noes is a scientific and philosophical initiative that aims to close the gap between academic research and society.</p>
@@ -36,24 +36,29 @@
       <div class="text">
         <p>We believe science and philosophy should not stay locked inside universities. Our aim is to give people the right tools to approach them at their real depth — without oversimplifying.</p>
 
-        <h2>Our Pillars</h2>
+        <h2 id="pillars">Our Pillars</h2>
         <h3><a href="../publications/">Publications</a></h3>
         <p>Writing and publishing scientific and philosophical works.</p>
         <h3><a href="../seminars/">Seminars</a></h3>
         <p>Interactive, in-person seminars.</p>
-        <h3><a href="../research/">Research Mentoring</a></h3>
-        <p>A pioneering model of academic mentorship: we help students (BSc, MSc, PhD) complete their theses, guide independent researchers in designing and publishing their ideas, and offer hands-on training in modern research tools.</p>
+        <h3><a href="../research/">Research</a></h3>
+        <p>Research labs, such as the <a href="../research/theodoni-lab/">Theodoni Lab</a>, and a pioneering model of academic mentorship: we help students (BSc, MSc, PhD) complete their theses, guide independent researchers in designing and publishing their ideas, and offer hands-on training in modern research tools.</p>
         <h3><a href="../consulting/">Consulting</a></h3>
-        <p>Specialised advisory services connecting cognitive science with practice.</p>
+        <p>Cognitive neuroscience for individuals and companies: private sessions, training, scientific support.</p>
 
-        <h2><a href="../creations/">Creations</a></h2>
+        <h2 id="creations"><a href="../creations/">Creations</a></h2>
         <p>At Noes we build platforms for education and for social and civic engagement: tools that bring knowledge and dialogue closer to everyone.</p>
         <h3><a href="https://www.femme-radio.gr">FemMe Radio</a></h3>
         <p>Independent, non-profit online radio: around the clock, talk, music and dialogue on women’s emancipation and the dismantling of patriarchy.</p>
         <h3><a href="../creations/logoplex/">Logoplex</a></h3>
-        <p>Word games for learning languages through play: Chinese, Modern and Ancient Greek.</p>
+        <p>Language learning through play and authentic texts: Chinese, Arabic, Modern and Ancient Greek and more. All languages at <a href="https://logoplex.app/">logoplex.app</a>.</p>
 
-        <h2 id="founder">The Founder</h2>
+        <!-- ===== WHO WE ARE ===== -->
+        <h2 id="who-we-are">Who we are</h2>
+        <p>Noes is a team of active researchers, educators and creators from the sciences, philosophy and the humanities. We share the conviction that knowledge belongs to everyone: each of us brings our own research into our seminars, labs and creations.</p>
+        <p>The team is open. You can <a href="../seminars/#proposal">give your own seminar</a> or <a href="../research/#new-lab">start your own lab</a> at Noes.</p>
+
+        <h3 id="founder">The Founder</h3>
         <div class="figure" style="max-width:260px;margin-bottom:20px">
           <img src="../../images/theodoni.jpg" alt="Dr. Panagiota Theodoni" loading="lazy" onerror="this.closest('.figure').hidden=true">
         </div>
@@ -61,9 +66,9 @@
         <p>She has a background in Physics and Theoretical &amp; Computational Neuroscience, and postgraduate studies in Philosophy. She has worked at the University of Athens, NCSR “Demokritos”, Panteion University, the Open University of Cyprus, Pompeu Fabra University, the Centre de Recerca Matemàtica, NYU Shanghai, ECNU Shanghai and NYU (Center for Neural Science and Department of Philosophy).</p>
         <p>After supervising students at the University of Athens and NYU, she decided to create an independent space for person-centred research mentorship.</p>
 
-        <!-- ===== POLITICAL STATEMENT — ο σύνδεσμος στο υποσέλιδο οδηγεί εδώ (en/about/#political-statement) ===== -->
-        <section class="statement-box" id="political-statement">
-          <p class="eyebrow">Political statement</p>
+        <!-- ===== POLITICAL STANCE — το μενού «About › Political stance» οδηγεί εδώ (en/about/#political-stance) ===== -->
+        <section class="statement-box" id="political-stance">
+          <p class="eyebrow">Political stance</p>
           <h2>Our philosophy: Against the myth of political neutrality</h2>
           <p>Noes, a centre for education and research, was born in 2026 into a world of deep crises and upheaval: a world where patriarchy remains deeply rooted, fascism is dangerously resurging and new forms of colonialism are intensifying. From the genocide in Palestine to the wars in Sudan and in every corner of the Earth, these crises expose the dead ends of contemporary capitalism and of unchecked technological power.</p>
           <p>At the same time, within the dominant academic and institutional structures of power, free critical thought and political expression are being stifled: researchers, educators and creators who resist are often isolated, silenced and erased.</p>
@@ -77,7 +82,7 @@
           <p class="closing">For us, research, language, education and creativity are not mechanisms that reproduce power, but tools of emancipation and resistance.</p>
         </section>
 
-        <h2>Contact</h2>
+        <h2 id="contact">Contact</h2>
         <p><a href="mailto:info@noes.gr">info@noes.gr</a></p>
       </div>
     </div>
@@ -85,6 +90,6 @@
 
   <!-- Υποσέλιδο: το γεμίζει αυτόματα το assets/site.js -->
   <footer id="site-footer"></footer>
-  <script src="../../assets/site.js?v=20261016f"></script>
+  <script src="../../assets/site.js?v=20261016g"></script>
 </body>
 </html>

@@ -331,12 +331,12 @@ main .wrap > h2[id]:first-child, main .wrap > .text:first-child > h2[id]:first-c
 .notice > span { flex: 1 1 300px; }      /* το κείμενο πιάνει τον χώρο και αναδιπλώνεται μέσα στη δική του στήλη */
 .notice > a { white-space: nowrap; }
 
-/* ---------- Υποσέλιδο: σύνδεσμος «Πολιτική δήλωση» ---------- */
+/* ---------- Υποσέλιδο: σύνδεσμοι ---------- */
 .site-footer a { color: inherit; text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--gold-bright) 80%, transparent); text-underline-offset: 4px; }
 .site-footer a:hover { color: var(--ink); }
 html[data-page="home"] .site-footer a:hover { color: #fff; }
 
-/* ---------- Σχετικά: πλαίσιο «Πολιτική δήλωση» ---------- */
+/* ---------- Σχετικά: πλαίσιο «Πολιτική θέση» ---------- */
 .statement-box { margin-top: 2.6em; padding: 30px 32px 22px; border-left: 4px solid var(--gold-bright); background: var(--navy-soft); border-radius: 0 var(--radius) var(--radius) 0; scroll-margin-top: 90px; }
 .statement-box h2 { margin-top: 0; }
 .statement-box .eyebrow { margin-bottom: 10px; }
@@ -363,3 +363,8 @@ html[data-page="home"] .site-footer a:hover { color: #fff; }
 .feature-link .feature-body { font-size: 1.1rem; color: rgba(255, 255, 255, .78); max-width: 60ch; }
 .feature-link .feature-cta { justify-self: start; margin-top: 10px; font: 600 16px/1 var(--ui); background: var(--gold-bright); color: var(--navy-deep); padding: 13px 22px; border-radius: 999px; }
 .sub-h { margin-top: 2.2em; }
+
+/* Το υπομενού του τελευταίου στοιχείου (Σχετικά) ανοίγει προς τα αριστερά, για να μη βγαίνει από την οθόνη */
+.nav details:last-of-type .sub { left: auto; right: -16px; }
+/* Σχετικά: οι ενότητες να μην κρύβονται κάτω από την κεφαλίδα όταν πας με το μενού */
+#pylones, #dimiourgies, #poioi-eimaste, #idrytria, #epikoinonia, #pillars, #creations, #who-we-are, #founder, #contact { scroll-margin-top: 100px; }

@@ -35,7 +35,14 @@
         { id: "logoplex", label: "Logoplex", href: "dimiourgies/logoplex/" },
         { id: "call-idea", label: "Έχεις μια ιδέα;", href: "dimiourgies/#idea", cls: "call" }
       ] },
-      { id: "sxetika", label: "Σχετικά", href: "sxetika/" }
+      { id: "sxetika", label: "Σχετικά", href: "sxetika/", sub: [
+        { id: "sxetika", label: "Το όραμά μας", href: "sxetika/" },
+        { id: "s-pylones", label: "Οι πυλώνες μας", href: "sxetika/#pylones" },
+        { id: "s-dimiourgies", label: "Δημιουργίες", href: "sxetika/#dimiourgies" },
+        { id: "s-poioi", label: "Ποιοι είμαστε", href: "sxetika/#poioi-eimaste" },
+        { id: "s-thesi", label: "Πολιτική θέση", href: "sxetika/#politiki-thesi" },
+        { id: "s-epikoinonia", label: "Επικοινωνία", href: "sxetika/#epikoinonia" }
+      ] }
     ],
     en: [
       { id: "publications", label: "Publications", href: "en/publications/" },
@@ -57,7 +64,14 @@
         { id: "logoplex", label: "Logoplex", href: "en/creations/logoplex/" },
         { id: "call-idea", label: "Have an idea?", href: "en/creations/#idea", cls: "call" }
       ] },
-      { id: "about", label: "About", href: "en/about/" }
+      { id: "about", label: "About", href: "en/about/", sub: [
+        { id: "about", label: "Our vision", href: "en/about/" },
+        { id: "a-pillars", label: "Our pillars", href: "en/about/#pillars" },
+        { id: "a-creations", label: "Creations", href: "en/about/#creations" },
+        { id: "a-who", label: "Who we are", href: "en/about/#who-we-are" },
+        { id: "a-stance", label: "Political stance", href: "en/about/#political-stance" },
+        { id: "a-contact", label: "Contact", href: "en/about/#contact" }
+      ] }
     ]
   };
 
