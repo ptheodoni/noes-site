@@ -52,7 +52,7 @@ window.NOES_FUND = {
   }
   fetch(F.endpoint).then(function (r) { return r.json(); }).then(function (d) {
     var t = d.totals || {};
-    // d.pool = 10% όλων των εσόδων (αυτόματα από το Stripe) + η στήριξη προς το Ταμείο· το «raised» πιο πάνω προστίθεται (π.χ. μετρητά)
+    // d.pool = 10% των εφάπαξ πληρωμών (όχι συνδρομών) (αυτόματα από το Stripe) + η στήριξη προς το Ταμείο· το «raised» πιο πάνω προστίθεται (π.χ. μετρητά)
     draw(F.raised + (d.pool != null ? d.pool : (t["research-pool"] || 0)), d.updated || F.updated);
     document.querySelectorAll("[data-project]").forEach(function (box) {
       var p = box.getAttribute("data-project"), sum = t[p] || 0, n = (d.counts || {})[p] || 0, names = (d.supporters || {})[p] || [];
