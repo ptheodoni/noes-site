@@ -5,7 +5,7 @@
    ===================================================================== */
 window.NOES_FUND = {
   goal: 5000,          // στόχος σε € (π.χ. μία υποτροφία)
-  raised: 0,           // πόσα έχουν μαζευτεί μέχρι σήμερα, σε €
+  raised: 0,           // ΕΠΙΠΛΕΟΝ ποσά εκτός Stripe (π.χ. μετρητά, τράπεζα), σε €· τα υπόλοιπα έρχονται αυτόματα
   share: 10,           // τι ποσοστό (%) των εσόδων από καθοδήγηση & προγράμματα πηγαίνει στο ταμείο
   updated: "2026-10-17",
   // Stripe Payment Link για δωρεές (με «Let customers choose what to pay»).
@@ -52,7 +52,8 @@ window.NOES_FUND = {
   }
   fetch(F.endpoint).then(function (r) { return r.json(); }).then(function (d) {
     var t = d.totals || {};
-    draw(F.raised + (t["research-pool"] || 0), d.updated || F.updated);
+    // d.pool = 10% όλων των εσόδων (αυτόματα από το Stripe) + η στήριξη προς το Ταμείο· το «raised» πιο πάνω προστίθεται (π.χ. μετρητά)
+    draw(F.raised + (d.pool != null ? d.pool : (t["research-pool"] || 0)), d.updated || F.updated);
     document.querySelectorAll("[data-project]").forEach(function (box) {
       var p = box.getAttribute("data-project"), sum = t[p] || 0, n = (d.counts || {})[p] || 0, names = (d.supporters || {})[p] || [];
       var h = '<p class="proj-sum"><b>' + fmt(sum) + "</b> " + (el ? "από " + n + (n === 1 ? " υποστηρικτή" : " υποστηρικτές") : "from " + n + (n === 1 ? " supporter" : " supporters")) + "</p>";
