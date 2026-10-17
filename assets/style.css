@@ -399,3 +399,17 @@ html[data-page="home"] .site-footer a:hover { color: #fff; }
 .research-link { font: 500 16px/1.5 var(--ui); background: var(--navy-soft); border-radius: 12px; padding: 12px 16px; margin: 14px 0 6px; }
 .research-link a { font-weight: 600; text-decoration: none; }
 .research-link a:hover { text-decoration: underline; }
+
+/* ---------- Ταμείο Έρευνας: μπάρα προόδου (νούμερα στο assets/fund.js) ---------- */
+.fund-label { margin: 18px 0 8px !important; font: 600 13px/1.4 var(--ui); letter-spacing: .08em; text-transform: uppercase; color: var(--gold-bright) !important; }
+.fund-track { height: 14px; border-radius: 999px; background: rgba(255, 255, 255, .14); overflow: hidden; }
+.fund-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #d9b24f, var(--gold-bright)); }
+.fund-nums { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 8px; font: 400 15px/1.4 var(--ui); color: rgba(255, 255, 255, .8); }
+.fund-nums b { color: #fff; font-weight: 600; }
+.support-box { margin-top: 36px; max-width: 920px; }
+.support-box a { color: var(--gold-bright); }
+.support-box .perks { color: rgba(255, 255, 255, .85); margin: 12px 0 0; padding-left: 1.2em; }
+.support-cta { margin-top: 22px !important; display: flex; gap: 10px 16px; align-items: center; flex-wrap: wrap; }
+.support-cta span { font-size: .95rem; color: rgba(255, 255, 255, .7); }
+.btn-gold { display: inline-block; font: 600 16px/1 var(--ui); background: var(--gold-bright); color: var(--navy-deep) !important; padding: 13px 22px; border-radius: 999px; text-decoration: none; }
+.btn-gold:hover { filter: brightness(1.05); }

@@ -17,8 +17,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Tinos:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Roboto:wght@400;500&display=swap">
-  <link rel="stylesheet" href="../../assets/style.css?v=20261017c">
-  <link rel="icon" href="../../images/favicon.png?v=20261017c">
+  <link rel="stylesheet" href="../../assets/style.css?v=20261017d">
+  <link rel="icon" href="../../images/favicon.png?v=20261017d">
 </head>
 <body>
   <!-- Κεφαλίδα: τη γεμίζει αυτόματα το assets/site.js -->
@@ -56,7 +56,10 @@
         <aside class="fund-box" id="tameio">
           <p class="eyebrow">How research is funded</p>
           <h2>The Noes Research Pool</h2>
-          <p>We believe in making research sustainable and self-reinforcing. <b>20% of all proceeds</b> from our personalised research mentorship and programmes is channelled directly into the Noes Research Pool. Whenever the pool reaches its target, an <b>open competitive call for paid research fellowships</b> is launched for students and early-career independent researchers.</p>
+          <p>We believe in making research sustainable and self-reinforcing. <b><span data-fund="share">10%</span> of all proceeds</b> from our personalised research mentorship and programmes is channelled directly into the Noes Research Pool. Whenever the pool reaches its target, an <b>open competitive call for paid research fellowships</b> is launched for students and early-career independent researchers.</p>
+          <!-- Μπάρα ταμείου: τα νούμερα αλλάζουν στο assets/fund.js -->
+          <p class="fund-label">Towards the next fellowship:</p>
+          <div class="fund-bar"></div>
         </aside>
 
         <!-- ----- 02 ----- -->
@@ -132,8 +135,9 @@
 
   <!-- Υποσέλιδο: το γεμίζει αυτόματα το assets/site.js -->
   <footer id="site-footer"></footer>
-  <script src="../../assets/site.js?v=20261017c"></script>
+  <script src="../../assets/site.js?v=20261017d"></script>
   <!-- Tally: ανοίγει τη φόρμα «Νέο εργαστήριο» σε αναδυόμενο παράθυρο -->
   <script async src="https://tally.so/widgets/embed.js"></script>
+  <script src="../../assets/fund.js?v=20261017d"></script>
 </body>
 </html>
