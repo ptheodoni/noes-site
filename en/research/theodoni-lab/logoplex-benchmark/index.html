@@ -36,13 +36,14 @@
         <h2 id="question">The question</h2>
         <p>Large language models (LLMs) use language with impressive fluency. But can they extract its rules?</p>
         <p><b>Speaking correctly</b> is one thing; being able to <b>state the rules</b> that decide what is correct is another. Recent studies show that models’ explicit, metalinguistic knowledge lags behind their use of language (<a href="https://aclanthology.org/2023.emnlp-main.306" target="_blank" rel="noopener">Hu &amp; Levy, 2023</a>; <a href="https://arxiv.org/abs/2409.19151" target="_blank" rel="noopener">Aycock et al., 2025</a>; <a href="https://arxiv.org/abs/2602.02182" target="_blank" rel="noopener">Arčon et al., 2026</a>; <a href="https://arxiv.org/abs/2605.05197" target="_blank" rel="noopener">Wang et al., 2026</a>). Far less studied is whether they can <b>construct</b> rules that correctly judge native speakers’ language, especially everyday speech. <b>This is the subject of the project, which emerged while developing Logoplex.</b></p>
+        <p>Yet the problem is not only about models; it is <b>cognitive</b>. Native speakers judge instantly what is correct without being able to explain it, and no grammar covers the whole of living language: “all grammars leak” (<a href="https://www.gutenberg.org/ebooks/12629" target="_blank" rel="noopener">Sapir, 1921</a>). Cognitive neuroscience still debates whether language rests on rules, on stored memory, or on both (<a href="https://doi.org/10.1016/S1364-6613(02)01990-3" target="_blank" rel="noopener">Pinker &amp; Ullman, 2002</a>; <a href="https://doi.org/10.1016/S1364-6613(02)01993-9" target="_blank" rel="noopener">McClelland &amp; Patterson, 2002</a>; <a href="https://doi.org/10.1016/j.cognition.2003.10.008" target="_blank" rel="noopener">Ullman, 2004</a>). Logoplex lets us study this empirically, setting both linguists’ rules and models’ rules against native speakers’ judgments.</p>
         <blockquote class="big-q">To what extent do they acquire productive knowledge of rules, and where do they rely on memorising frequent patterns?</blockquote>
         <p>Building <a href="https://logoplex.app/" target="_blank" rel="noopener">Logoplex</a> across typologically diverse languages (Ancient and Modern Greek, Chinese, Arabic and more), the limits show most where everyday speech goes beyond strict grammar, as well as in rare forms, stress and dialects. Is this a matter of data, of how models learn, or is part of living language simply beyond rules?</p>
 
         <h2 id="approach">The approach</h2>
         <p>Logoplex is not only a language-learning game; it is a <b>living research testbed</b>. To work at all, each language is encoded in explicit rules, which become a yardstick for both models and native speakers.</p>
         <ul>
-          <li><b>Using vs stating rules:</b> we ask models to write explicit rules, and test them on sentences judged by native speakers.</li>
+          <li><b>Where rules “leak”:</b> we compare three sources of rules (linguists’, models’, and those encoded in Logoplex) with native speakers’ judgments, to see whether they fail in the same places.</li>
           <li><b>Everyday speech &amp; constructions:</b> where living language escapes the rules, and how models handle it compared with people.</li>
           <li><b>Rule or memory:</b> tests with pseudo-words, to see whether a rule is applied to words the model has never seen.</li>
           <li><b>Comparing languages and models:</b> matched items in Greek, English and other languages, and models with the same architecture but different training data, to separate what is due to data from what is due to language.</li>
@@ -52,9 +53,13 @@
         <!-- ===== REFERENCES (add new sources as <li>…</li>) ===== -->
         <h3 id="references">References</h3>
         <ul class="refs">
-          <li>Hu, J. &amp; Levy, R. (2023). <a href="https://aclanthology.org/2023.emnlp-main.306" target="_blank" rel="noopener">Prompting is not a substitute for probability measurements in large language models</a>. <i>EMNLP 2023</i>.</li>
-          <li>Aycock, S. et al. (2025). <a href="https://arxiv.org/abs/2409.19151" target="_blank" rel="noopener">Can LLMs really learn to translate a low-resource language from one grammar book?</a>. <i>ICLR 2025</i>.</li>
           <li>Arčon, T., Klemen, M., Robnik-Šikonja, M. &amp; Dobrovoljc, K. (2026). <a href="https://arxiv.org/abs/2602.02182" target="_blank" rel="noopener">Evaluating metalinguistic knowledge in large language models across the world’s languages</a>. <i>arXiv:2602.02182</i>.</li>
+          <li>Aycock, S. et al. (2025). <a href="https://arxiv.org/abs/2409.19151" target="_blank" rel="noopener">Can LLMs really learn to translate a low-resource language from one grammar book?</a>. <i>ICLR 2025</i>.</li>
+          <li>Hu, J. &amp; Levy, R. (2023). <a href="https://aclanthology.org/2023.emnlp-main.306" target="_blank" rel="noopener">Prompting is not a substitute for probability measurements in large language models</a>. <i>EMNLP 2023</i>.</li>
+          <li>McClelland, J. L. &amp; Patterson, K. (2002). <a href="https://doi.org/10.1016/S1364-6613(02)01993-9" target="_blank" rel="noopener">Rules or connections in past-tense inflections: what does the evidence rule out?</a> <i>Trends in Cognitive Sciences</i>, 6(11), 465–472.</li>
+          <li>Pinker, S. &amp; Ullman, M. T. (2002). <a href="https://doi.org/10.1016/S1364-6613(02)01990-3" target="_blank" rel="noopener">The past and future of the past tense</a>. <i>Trends in Cognitive Sciences</i>, 6(11), 456–463.</li>
+          <li>Sapir, E. (1921). <a href="https://www.gutenberg.org/ebooks/12629" target="_blank" rel="noopener">Language: An Introduction to the Study of Speech</a>. New York: Harcourt, Brace (ch. 2, p. 39: «All grammars leak»).</li>
+          <li>Ullman, M. T. (2004). <a href="https://doi.org/10.1016/j.cognition.2003.10.008" target="_blank" rel="noopener">Contributions of memory circuits to language: the declarative/procedural model</a>. <i>Cognition</i>, 92(1–2), 231–270.</li>
           <li>Wang, Y. S., Qiu, L., Wu, Z., Levy, R. P. &amp; Kim, Y. (2026). <a href="https://arxiv.org/abs/2605.05197" target="_blank" rel="noopener">Implicit representations of grammaticality in language models</a>. <i>arXiv:2605.05197</i>.</li>
         </ul>
       </div>
