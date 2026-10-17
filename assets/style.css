@@ -413,3 +413,14 @@ html[data-page="home"] .site-footer a:hover { color: #fff; }
 .support-cta span { font-size: .95rem; color: rgba(255, 255, 255, .7); }
 .btn-gold { display: inline-block; font: 600 16px/1 var(--ui); background: var(--gold-bright); color: var(--navy-deep) !important; padding: 13px 22px; border-radius: 999px; text-decoration: none; }
 .btn-gold:hover { filter: brightness(1.05); }
+
+/* Στήριξη ανά έργο: σύνολο, ορόσημα, ονόματα υποστηρικτών (από assets/fund.js) */
+.proj-box p { margin: 0 0 6px !important; }
+.proj-sum { font: 400 16px/1.4 var(--ui); color: rgba(255, 255, 255, .85); }
+.proj-sum b { color: #fff; font-size: 1.15em; }
+.milestones { list-style: none; padding: 0; margin: 10px 0 !important; }
+.milestones li { padding: 6px 0 6px 28px; position: relative; color: rgba(255, 255, 255, .8); }
+.milestones li::before { content: "○"; position: absolute; left: 4px; color: var(--gold-bright); }
+.milestones li.done::before { content: "●"; }
+.proj-box .names { font-style: italic; color: rgba(255, 255, 255, .75); }
+.proj-box .names span { font-style: normal; color: var(--gold-bright); }
