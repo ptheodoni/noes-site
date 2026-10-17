@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Tinos:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Roboto:wght@400;500&display=swap">
-  <link rel="stylesheet" href="../../../assets/style.css?v=20261017i">
+  <link rel="stylesheet" href="../../../assets/style.css?v=20261017k">
   <link rel="icon" href="../../../images/favicon.png?v=20261017g">
 </head>
 <body>
@@ -46,7 +46,7 @@
         <!-- ===== ΤΟ ΕΡΩΤΗΜΑ ===== -->
         <h2 id="erotima">Το ερώτημα</h2>
         <p>Τα μεγάλα γλωσσικά μοντέλα (LLMs) χρησιμοποιούν τη γλώσσα με εντυπωσιακή ευχέρεια. Μπορούν όμως να εξαγάγουν τους κανόνες της;</p>
-        <p>Άλλο είναι να <b>μιλάς σωστά</b> και άλλο να μπορείς να <b>διατυπώσεις τους κανόνες</b> που κρίνουν τι είναι σωστό. Η έρευνα μέχρι σήμερα μετρά κυρίως το πρώτο. Εμάς μας ενδιαφέρει το δεύτερο, και το χάσμα ανάμεσά τους.</p>
+        <p>Άλλο είναι να <b>μιλάς σωστά</b> και άλλο να μπορείς να <b>διατυπώσεις τους κανόνες</b> που κρίνουν τι είναι σωστό. Πρόσφατες μελέτες δείχνουν ότι η ρητή, μεταγλωσσική γνώση των μοντέλων υστερεί της χρήσης τους (<a href="https://aclanthology.org/2023.emnlp-main.306" target="_blank" rel="noopener">Hu &amp; Levy, 2023</a>· <a href="https://arxiv.org/abs/2409.19151" target="_blank" rel="noopener">Aycock et al., 2025</a>· <a href="https://arxiv.org/abs/2602.02182" target="_blank" rel="noopener">Arčon et al., 2026</a>· <a href="https://arxiv.org/abs/2605.05197" target="_blank" rel="noopener">Wang et al., 2026</a>). Ελάχιστα όμως έχει μελετηθεί αν μπορούν να <b>κατασκευάσουν</b> κανόνες που κρίνουν σωστά τον λόγο φυσικών ομιλητών, ειδικά στην καθομιλουμένη. <b>Αυτό είναι το αντικείμενο του έργου, που προκύπτει κατά την ανάπτυξη του Logoplex.</b></p>
         <blockquote class="big-q">Σε ποιο βαθμό αποκτούν παραγωγική γνώση κανόνων, και πού στηρίζονται στην απομνημόνευση συχνών μοτίβων;</blockquote>
         <p>Φτιάχνοντας το <a href="https://logoplex.app/" target="_blank" rel="noopener">Logoplex</a> σε τυπολογικά διαφορετικές γλώσσες (αρχαία και νέα ελληνικά, κινέζικα, αραβικά κ.ά.), τα όρια φαίνονται κυρίως εκεί όπου η καθομιλουμένη ξεπερνά την αυστηρή γραμματική, αλλά και σε σπάνιες μορφές, στον τονισμό και στις διαλέκτους. Είναι αυτό ζήτημα δεδομένων, του τρόπου που μαθαίνουν τα μοντέλα, ή μήπως ένα μέρος της ζωντανής γλώσσας δεν χωράει εξαρχής σε κανόνες;</p>
 
@@ -61,6 +61,14 @@
           <li><b>Ανοιχτή επιστήμη:</b> τα σύνολα δοκιμών και τα αποτελέσματα θα δημοσιεύονται ανοιχτά.</li>
         </ul>
         <p><b>Ενδεικτικά θέματα διπλωματικών:</b> κανόνας ή μνήμη με ψευδολέξεις (ελληνικά και αγγλικά) · δεδομένα, tokenizer ή μέγεθος μοντέλου; · καθομιλουμένη, διάλεκτοι και καθαρεύουσα · επαγωγή κανόνων από μια επινοημένη γλώσσα.</p>
+        <!-- ===== ΒΙΒΛΙΟΓΡΑΦΙΑ (πρόσθεσε νέες πηγές ως <li>…</li>) ===== -->
+        <h3 id="vivliografia">Βιβλιογραφία</h3>
+        <ul class="refs">
+          <li>Hu, J. &amp; Levy, R. (2023). <a href="https://aclanthology.org/2023.emnlp-main.306" target="_blank" rel="noopener">Prompting is not a substitute for probability measurements in large language models</a>. <i>EMNLP 2023</i>.</li>
+          <li>Aycock, S. et al. (2025). <a href="https://arxiv.org/abs/2409.19151" target="_blank" rel="noopener">Can LLMs really learn to translate a low-resource language from one grammar book?</a>. <i>ICLR 2025</i>.</li>
+          <li>Arčon, T., Klemen, M., Robnik-Šikonja, M. &amp; Dobrovoljc, K. (2026). <a href="https://arxiv.org/abs/2602.02182" target="_blank" rel="noopener">Evaluating metalinguistic knowledge in large language models across the world’s languages</a>. <i>arXiv:2602.02182</i>.</li>
+          <li>Wang, Y. S., Qiu, L., Wu, Z., Levy, R. P. &amp; Kim, Y. (2026). <a href="https://arxiv.org/abs/2605.05197" target="_blank" rel="noopener">Implicit representations of grammaticality in language models</a>. <i>arXiv:2605.05197</i>.</li>
+        </ul>
       </div>
 
       <!-- ===== ΠΩΣ ΜΠΟΡΕΙΣ ΝΑ ΣΥΜΜΕΤΑΣΧΕΙΣ =====
