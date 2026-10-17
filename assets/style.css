@@ -345,7 +345,7 @@ html[data-page="home"] .site-footer a:hover { color: #fff; }
 
 /* ---------- Έρευνα: κουτί «Το δικό σας εργαστήριο» (πρόσκληση με φόρμα) ----------
    Τα εργαστήρια μπαίνουν το ένα κάτω από το άλλο· η πρόσκληση είναι τελευταία. */
-.cards.labs { grid-template-columns: 1fr; max-width: 860px; }
+.cards.labs { grid-template-columns: 1fr; max-width: 920px; }
 .cards.labs:has(> .lab-invite:only-child) { margin-top: 28px; max-width: none; }   /* απόσταση της πρόσκλησης στα Σεμινάρια */
 .card.lab-invite { background: var(--navy-soft); border: 1.5px dashed color-mix(in srgb, var(--gold-bright) 75%, var(--line)); border-top-width: 1.5px; box-shadow: none; }
 
@@ -368,3 +368,22 @@ html[data-page="home"] .site-footer a:hover { color: #fff; }
 .nav details:last-of-type .sub { left: auto; right: -16px; }
 /* Σχετικά: οι ενότητες να μην κρύβονται κάτω από την κεφαλίδα όταν πας με το μενού */
 #pylones, #dimiourgies, #poioi-eimaste, #idrytria, #epikoinonia, #pillars, #creations, #who-we-are, #founder, #contact { scroll-margin-top: 100px; }
+
+/* ---------- Σελίδα «Έρευνα»: οι 4 ενότητες (01–04), το Ταμείο Έρευνας, τα εργαστήρια ---------- */
+.r-blocks { display: grid; gap: 22px; margin-top: 40px; max-width: 920px; }
+.r-block { display: grid; grid-template-columns: 76px 1fr; gap: 6px 26px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px 32px; box-shadow: var(--shadow); scroll-margin-top: 100px; }
+.r-num { font: 400 46px/1 var(--display); color: var(--gold-bright); padding-top: 2px; }
+.r-block .meta { font: 600 13px/1.4 var(--ui); letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin: 0 0 6px; }
+.r-block h2 { margin: 0 0 12px; font-size: clamp(1.6rem, 3vw, 2.1rem); }
+.r-block p { margin: 0 0 12px; }
+.r-block ul { margin: 0 0 14px; padding-left: 1.1em; }
+.r-block li { margin-bottom: 8px; }
+.r-block a.more { display: inline-block; font: 600 16.5px/1 var(--ui); text-decoration: none; margin-top: 4px; }
+.r-block a.more:hover { text-decoration: underline; }
+.fund-box { background: var(--navy-deep); color: #fff; border-radius: var(--radius); padding: 30px 34px; scroll-margin-top: 100px; }
+.fund-box .eyebrow { color: var(--gold-bright); margin-bottom: 10px; }
+.fund-box h2 { color: #fff; margin: 0 0 12px; font-size: clamp(1.6rem, 3vw, 2.1rem); }
+.fund-box p { color: rgba(255, 255, 255, .85); margin: 0; }
+.fund-box b { color: var(--gold-bright); font-weight: 600; }
+.labs-h { margin-top: 2.4em; scroll-margin-top: 100px; }
+@media (max-width: 600px) { .r-block { grid-template-columns: 1fr; padding: 24px 22px; } .r-num { font-size: 36px; } .fund-box { padding: 24px 22px; } }
