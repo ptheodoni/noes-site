@@ -424,3 +424,8 @@ html[data-page="home"] .site-footer a:hover { color: #fff; }
 .milestones li.done::before { content: "●"; }
 .proj-box .names { font-style: italic; color: rgba(255, 255, 255, .75); }
 .proj-box .names span { font-style: normal; color: var(--gold-bright); }
+
+/* Βίντεο στο τέλος σελίδας, στο κέντρο (κάθετο βίντεο τύπου κινητού) */
+.video-box { margin: 56px auto 0; max-width: 360px; text-align: center; }
+.video-box video { width: 100%; height: auto; border-radius: 18px; box-shadow: var(--shadow-hover); background: #000; }
+.video-box figcaption { margin-top: 10px; font: 500 15px/1.4 var(--ui); color: var(--muted); }
