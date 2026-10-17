@@ -10,7 +10,7 @@ window.NOES_FUND = {
   updated: "2026-10-17",
   // Stripe Payment Link για δωρεές (με «Let customers choose what to pay»).
   // Επικόλλησε εδώ τον σύνδεσμο (https://buy.stripe.com/...). Όσο είναι κενός, τα κουμπιά ανοίγουν email.
-  donateLink: ""
+  donateLink: "https://buy.stripe.com/4gM3co8ftb0F4ge6pXdjO02"
 };
 
 (function () {
