@@ -11,9 +11,9 @@ window.NOES_FUND = {
   // Stripe Payment Link για δωρεές (με «Let customers choose what to pay»).
   // Επικόλλησε εδώ τον σύνδεσμο (https://buy.stripe.com/...). Όσο είναι κενός, τα κουμπιά ανοίγουν email.
   donateLink: "https://buy.stripe.com/4gM3co8ftb0F4ge6pXdjO02",
-  // Η διεύθυνση του Cloudflare Worker «noes-fund» (π.χ. https://noes-fund.ΚΑΤΙ.workers.dev).
+  // Η διεύθυνση που δίνει τα σύνολα στήριξης (το Worker του logoplex.app, διαδρομή /api/fund).
   // Όσο είναι κενή, η μπάρα δείχνει μόνο το «raised» πιο πάνω.
-  endpoint: "",
+  endpoint: "https://logoplex.app/api/fund",
   // Ορόσημα ανά έργο (προαιρετικά). Παράδειγμα:
   // "logoplex-benchmark": [ { at: 1000, el: "Δημόσιο benchmark ελληνικής σύνταξης", en: "Public Greek syntax benchmark" } ]
   milestones: {}
