@@ -1,0 +1,103 @@
+<!doctype html>
+<!--
+  =====================================================================
+  ΣΕΛΙΔΑ: Ερευνητικό έργο «Το πείραμα του Logoplex» (Theodoni Lab)
+  Αρχείο: ereuna/theodoni-lab/logoplex-benchmark/index.html
+
+  ΠΩΣ ΤΗΝ ΑΛΛΑΖΕΙΣ
+  - Άλλαξε μόνο το κείμενο ανάμεσα στο <main> και στο </main>.
+  - Η κεφαλίδα (λογότυπο, μενού) και το υποσέλιδο μπαίνουν αυτόματα
+    από το assets/site.js — δεν τα γράφεις εδώ.
+  - Χρώματα/γραμματοσειρές: assets/style.css (μπλοκ :root).
+  - <p>…</p> = παράγραφος, <h2>…</h2> = υπότιτλος,
+    <a href="…">…</a> = σύνδεσμος, <b>…</b> = έντονα.
+  =====================================================================
+-->
+<html lang="el" data-root="../../../" data-page="theodoni-lab">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- Ο τίτλος στην καρτέλα του browser και στη Google -->
+  <title>Το πείραμα του Logoplex — Theodoni Lab — Νόες</title>
+  <!-- Η περιγραφή που δείχνει η Google κάτω από τον τίτλο -->
+  <meta name="description" content="Υπολογιστική γλώσσα και όρια των LLMs: το Logoplex ως ζωντανό ερευνητικό πεδίο δοκιμών, στο Theodoni Lab των Νόων.">
+  <!-- Η ίδια σελίδα στην άλλη γλώσσα (για το κουμπί English/Ελληνικά) -->
+  <meta name="alt-lang" content="en/research/theodoni-lab/logoplex-benchmark/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Tinos:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Roboto:wght@400;500&display=swap">
+  <link rel="stylesheet" href="../../../assets/style.css?v=20261017b">
+  <link rel="icon" href="../../../images/favicon.png?v=20261017b">
+</head>
+<body>
+  <!-- Κεφαλίδα: τη γεμίζει αυτόματα το assets/site.js -->
+  <header id="site-header"></header>
+
+  <main>
+    <!-- ===== ΖΩΝΗ ΤΙΤΛΟΥ ===== -->
+    <section class="page-head bleed"><div class="wrap">
+      <p class="eyebrow"><a href="../">Theodoni Lab</a> · Ερευνητικό έργο</p>
+      <h1>Υπολογιστική γλώσσα &amp; όρια των LLMs</h1>
+      <p class="lead">Το πείραμα του Logoplex · <i>Linguistic Computation &amp; LLM Limitations: The Logoplex Benchmark</i></p>
+    </div></section>
+
+    <div class="wrap">
+      <div class="text">
+        <!-- ===== ΤΟ ΕΡΩΤΗΜΑ ===== -->
+        <h2 id="erotima">Το ερώτημα</h2>
+        <p>Αναπτύσσοντας το <a href="https://logoplex.app/" target="_blank" rel="noopener">Logoplex</a> σε τυπολογικά διαφορετικές γλώσσες (αρχαία και νέα ελληνικά, κινέζικα, αραβικά κ.ά.), μελετούμε ένα θεμελιώδες επιστημονικό ερώτημα:</p>
+        <blockquote class="big-q">Τα μεγάλα γλωσσικά μοντέλα (LLMs) υπερέχουν στη στατιστική απομίμηση της γλώσσας. Σε ποιο βαθμό όμως εξάγουν αυστηρούς, συνθετικούς κανόνες σύνταξης και γραμματικής, και πού αποτυγχάνουν;</blockquote>
+        <p>Και όπου αποτυγχάνουν: είναι ζήτημα όγκου δεδομένων και εκπαίδευσης, αρχιτεκτονικής των νευρωνικών δικτύων, ή της ενδογενούς πολυπλοκότητας της ίδιας της ανθρώπινης γλώσσας;</p>
+
+        <!-- ===== Η ΠΡΟΣΕΓΓΙΣΗ ===== -->
+        <h2 id="prosengisi">Η προσέγγιση</h2>
+        <p>Το Logoplex δεν είναι μόνο ένα παιχνίδι εκμάθησης γλωσσών· είναι ένα <b>ζωντανό ερευνητικό πεδίο δοκιμών</b> (living research testbed). Για να λειτουργήσει, κάθε γλώσσα πρέπει να κωδικοποιηθεί σε ρητούς κανόνες: ποιες λέξεις συνδυάζονται, πώς κλίνονται, πότε μια πρόταση είναι γραμματικά σωστή. Αυτοί οι κανόνες γίνονται το μέτρο σύγκρισης για τις απαντήσεις των γλωσσικών μοντέλων.</p>
+        <ul>
+          <li><b>Σύγκριση:</b> αποκρίσεις LLMs απέναντι σε ρητές γραμματικές, σε γλώσσες με πολύ διαφορετική δομή.</li>
+          <li><b>Benchmark:</b> ανάπτυξη συνόλων δοκιμών για τη σύνταξη, ξεκινώντας από τα ελληνικά.</li>
+          <li><b>Θεωρία:</b> τι μας λένε τα λάθη των μοντέλων για τη φύση της γλώσσας και της νόησης.</li>
+        </ul>
+      </div>
+
+      <!-- ===== ΠΩΣ ΜΠΟΡΕΙΣ ΝΑ ΣΥΜΜΕΤΑΣΧΕΙΣ =====
+           Κάθε κουτί έχει κουμπί που ανοίγει email προς info@noes.gr με έτοιμο θέμα. -->
+      <h2 id="symmetoxi" class="labs-h">Πώς μπορείς να συμμετάσχεις</h2>
+      <div class="cards">
+        <article class="card">
+          <p class="meta">Συμμετοχή στην έρευνα</p>
+          <h3>Πτυχιακή, master ή δική σου έρευνα</h3>
+          <p>Για φοιτητές και ερευνητές που θέλουν να δουλέψουν πάνω στη σύγκριση αποκρίσεων LLMs με κανόνες γραμματικής ή σε benchmark ελληνικής και αγγλικής σύνταξης, με επίβλεψη από το εργαστήριο.</p>
+          <a class="more" href="mailto:info@noes.gr?subject=Logoplex%20Benchmark%20%E2%80%94%20%CE%A3%CF%85%CE%BC%CE%BC%CE%B5%CF%84%CE%BF%CF%87%CE%AE">Δήλωσε ενδιαφέρον →</a>
+        </article>
+        <article class="card">
+          <p class="meta">Συνεργασία</p>
+          <h3>Κοινές ερευνητικές προτάσεις</h3>
+          <p>Για εργαστήρια, ιδρύματα και ερευνητές που θέλουν να αναπτύξουμε μαζί πρόταση για χρηματοδότηση γύρω από τη γλώσσα, τη νόηση και τα όρια της τεχνητής νοημοσύνης.</p>
+          <a class="more" href="mailto:info@noes.gr?subject=Logoplex%20Benchmark%20%E2%80%94%20%CE%A3%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1">Πρότεινε συνεργασία →</a>
+        </article>
+        <article class="card">
+          <p class="meta">Στήριξη</p>
+          <h3>Στήριξε το έργο</h3>
+          <p>Ως δωρητής ή χορηγός, στηρίζεις την υπολογιστική έρευνα και την επέκταση της πλατφόρμας σε νέες γλώσσες: όχι απλώς ένα παιχνίδι, αλλά απτή έρευνα για τα όρια της τεχνητής νοημοσύνης.</p>
+          <a class="more" href="mailto:info@noes.gr?subject=Logoplex%20Benchmark%20%E2%80%94%20%CE%A3%CF%84%CE%AE%CF%81%CE%B9%CE%BE%CE%B7">Γίνε υποστηρικτής →</a>
+        </article>
+      </div>
+
+      <!-- ===== ΔΕΣ ΤΟ ΕΡΓΑΛΕΙΟ ===== -->
+      <a class="feature-link" href="https://logoplex.app/" target="_blank" rel="noopener">
+        <span class="meta">Το πεδίο δοκιμών</span>
+        <span class="feature-title">logoplex.app</span>
+        <span class="feature-body">Δες το εργαλείο στην πράξη, σε όλες τις γλώσσες.</span>
+        <span class="feature-cta">Εξερεύνησε το Logoplex ↗</span>
+      </a>
+
+      <p class="back"><a href="../">← Theodoni Lab</a></p>
+    </div>
+  
+  </main>
+
+  <!-- Υποσέλιδο: το γεμίζει αυτόματα το assets/site.js -->
+  <footer id="site-footer"></footer>
+  <script src="../../../assets/site.js?v=20261017b"></script>
+</body>
+</html>

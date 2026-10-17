@@ -387,3 +387,10 @@ html[data-page="home"] .site-footer a:hover { color: #fff; }
 .fund-box b { color: var(--gold-bright); font-weight: 600; }
 .labs-h { margin-top: 2.4em; scroll-margin-top: 100px; }
 @media (max-width: 600px) { .r-block { grid-template-columns: 1fr; padding: 24px 22px; } .r-num { font-size: 36px; } .fund-box { padding: 24px 22px; } }
+
+/* ---------- Ερευνητικά έργα (Theodoni Lab) ---------- */
+.card.project { border-top: 4px solid var(--gold-bright); }
+.card.project h3 { font-size: 1.6rem; }
+.big-q { margin: 18px 0; padding: 18px 22px; border-left: 4px solid var(--gold-bright); background: var(--navy-soft); border-radius: 0 14px 14px 0; font: 400 clamp(1.15rem, 2vw, 1.35rem)/1.55 var(--body); color: var(--ink); }
+.back { margin-top: 36px; }
+.page-head .eyebrow a { color: var(--gold-bright); text-decoration: none; }
