@@ -435,5 +435,5 @@ html[data-page="home"] .site-footer a:hover { color: #fff; }
 .refs { list-style: none; padding-left: 0; font-size: .92rem; line-height: 1.5; }
 .refs li { margin: .4em 0; padding-left: 1.4em; text-indent: -1.4em; }
 
-/* Φράση του λογότυπου στην αρχική («το νοητικό γυμναστήριο»): πλάγια, χωρίς υπογράμμιση, μέσα στο κουτάκι */
+/* Φράση του λογότυπου στην αρχική («το γυμναστήριο του νου»): πλάγια, χωρίς υπογράμμιση, μέσα στο κουτάκι */
 .hero a.vision.tag { font-style: italic; letter-spacing: .04em; text-decoration: none; }
