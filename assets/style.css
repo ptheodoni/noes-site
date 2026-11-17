@@ -459,3 +459,16 @@ button.btn-line { background: none; cursor: pointer; }
 .book-audio { margin-top: 16px; background: var(--navy-soft); border-radius: 12px; padding: 12px 14px; }
 .book-audio-label { font: 600 13px/1.4 var(--ui); letter-spacing: .08em; text-transform: uppercase; color: var(--navy-deep); margin: 0 0 8px; }
 .book-audio audio { width: 100%; }
+
+/* ===== Νέα: λίστα σαν ημερολόγιο (ημερομηνία αριστερά, νέο δεξιά, γραμμή χρόνου ανάμεσα) ===== */
+.news { max-width: 860px; margin: 0 auto; padding: 8px 0 40px; }
+.news-item { display: grid; grid-template-columns: 170px 1fr; gap: 28px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+.news-item time { font: 600 14px/1.5 var(--ui); color: var(--muted); padding-top: 4px; }
+.news-body { border-left: 2px solid var(--gold-bright); padding-left: 22px; }
+.news-tag { font: 600 12px/1.4 var(--ui); letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin: 0 0 4px; }
+.news-body h2 { font-size: clamp(1.25rem, 2vw, 1.5rem); margin: 0 0 8px; line-height: 1.3; max-width: none; }
+.news-body h2 a { color: var(--navy-deep); text-decoration: none; }
+.news-body h2 a:hover { text-decoration: underline; text-decoration-color: var(--gold-bright); }
+.news-body h2 i { font-style: italic; }
+.news-body p:last-child { margin-bottom: 0; }
+@media (max-width: 720px) { .news-item { grid-template-columns: 1fr; gap: 6px; } }

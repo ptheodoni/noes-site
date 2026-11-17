@@ -42,7 +42,8 @@
         { id: "s-poioi", label: "Ποιοι είμαστε", href: "sxetika/#poioi-eimaste" },
         { id: "s-thesi", label: "Πολιτική θέση", href: "sxetika/#politiki-thesi" },
         { id: "s-epikoinonia", label: "Επικοινωνία", href: "sxetika/#epikoinonia" }
-      ] }
+      ] },
+      { id: "nea", label: "Νέα", href: "nea/" }
     ],
     en: [
       { id: "publications", label: "Publications", href: "en/publications/" },
@@ -71,7 +72,8 @@
         { id: "a-who", label: "Who we are", href: "en/about/#who-we-are" },
         { id: "a-stance", label: "Political stance", href: "en/about/#political-stance" },
         { id: "a-contact", label: "Contact", href: "en/about/#contact" }
-      ] }
+      ] },
+      { id: "news", label: "News", href: "en/news/" }
     ]
   };
 
