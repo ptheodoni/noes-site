@@ -454,3 +454,8 @@ html[data-page="home"] .site-footer a:hover { color: #fff; }
 .btn-line:hover { background: var(--navy-deep); color: #fff; }
 .book-note { font-size: .92rem; color: var(--muted); margin-top: 10px; }
 @media (max-width: 720px) { .book { grid-template-columns: 1fr; } .book-cover { max-width: 240px; margin: 0 auto; } }
+/* Ακρόαση βιβλίου (κουμπί «Άκουσε online» → εμφανίζεται ο player) */
+button.btn-line { background: none; cursor: pointer; }
+.book-audio { margin-top: 16px; background: var(--navy-soft); border-radius: 12px; padding: 12px 14px; }
+.book-audio-label { font: 600 13px/1.4 var(--ui); letter-spacing: .08em; text-transform: uppercase; color: var(--navy-deep); margin: 0 0 8px; }
+.book-audio audio { width: 100%; }

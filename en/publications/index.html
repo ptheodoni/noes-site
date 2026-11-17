@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Tinos:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Roboto:wght@400;500&display=swap">
-  <link rel="stylesheet" href="../../assets/style.css?v=20261117a">
+  <link rel="stylesheet" href="../../assets/style.css?v=20261117b">
   <link rel="icon" href="../../images/favicon.png?v=20261017g">
 </head>
 <body>
@@ -49,14 +49,30 @@
             <p>Two friends walk in a garden on three mornings and argue whether matter exists outside the mind. Hylas defends matter; Philonous, “the friend of mind”, speaks for Berkeley. The English text of the third edition (1734) and a new Greek translation in facing columns, with an introduction, section titles and a glossary (in Greek).</p>
             <p class="book-actions">
               <a class="btn-gold" href="../../ekdoseis/berkeley/berkeley-treis-dialogoi.pdf" target="_blank" rel="noopener">Read online</a>
+              <button type="button" class="btn-line" data-listen="berkeley-audio">Listen online</button>
               <a class="btn-line" href="../../ekdoseis/berkeley/berkeley-treis-dialogoi.pdf" download>Download the PDF</a>
             </p>
-            <p class="book-note">Freely distributed in electronic form · PDF, 152 pp.</p>
+            <!-- Ακρόαση: το αρχείο ήχου είναι στο ekdoseis/berkeley/. Για να το αλλάξεις, άλλαξε το src.
+                 Το πλαίσιο είναι κρυφό (hidden) μέχρι να πατηθεί το κουμπί «Άκουσε». -->
+            <div class="book-audio" id="berkeley-audio" hidden>
+              <p class="book-audio-label">Audio (in Greek) · sample excerpt (17′)</p>
+              <audio controls preload="none" src="../../ekdoseis/berkeley/berkeley-akroasi-dokimastiko.mp3"></audio>
+            </div>
+            <p class="book-note">Freely distributed in electronic form · PDF, 152 pp. · audio sample</p>
           </div>
         </article>
       </div>
     </div>
   </main>
+  <!-- Κουμπί «Άκουσε»: εμφανίζει τον ήχο και ξεκινά την αναπαραγωγή -->
+  <script>
+    document.querySelectorAll('[data-listen]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var box = document.getElementById(b.dataset.listen), au = box.querySelector('audio');
+        box.hidden = false; au.play(); box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    });
+  </script>
 
   <!-- Υποσέλιδο: το γεμίζει αυτόματα το assets/site.js -->
   <footer id="site-footer"></footer>
