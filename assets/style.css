@@ -472,3 +472,11 @@ button.btn-line { background: none; cursor: pointer; }
 .news-body h2 i { font-style: italic; }
 .news-body p:last-child { margin-bottom: 0; }
 @media (max-width: 720px) { .news-item { grid-template-columns: 1fr; gap: 6px; } }
+/* Λίστα ακρόασης: το κομμάτι που παίζει τώρα φωτίζεται (κλάση .now) */
+.playlist { list-style: decimal; margin: 10px 0 0; padding-left: 1.6em; font-size: .98rem; }
+.playlist li { padding: 3px 0; }
+.playlist button { background: none; border: 0; padding: 0; font: inherit; color: var(--navy-deep); cursor: pointer; text-align: left; }
+.playlist button:hover { text-decoration: underline; text-decoration-color: var(--gold-bright); }
+.playlist .dur { color: var(--muted); font-size: .88em; margin-left: 6px; }
+.playlist li.now button { font-weight: 700; }
+.playlist li.now::marker { color: var(--gold); }

@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Tinos:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Roboto:wght@400;500&display=swap">
-  <link rel="stylesheet" href="../../assets/style.css?v=20261117b">
+  <link rel="stylesheet" href="../../assets/style.css?v=20261117d">
   <link rel="icon" href="../../images/favicon.png?v=20261017g">
 </head>
 <body>
@@ -37,7 +37,7 @@
 
         <!-- ===== BOOKS: ίδια δομή με την ελληνική σελίδα (ekdoseis/). Τα αρχεία είναι στο ekdoseis/berkeley/ ===== -->
         <article class="book" id="berkeley">
-          <a class="book-cover" href="../../ekdoseis/berkeley/berkeley-treis-dialogoi.pdf?v=2" target="_blank" rel="noopener">
+          <a class="book-cover" href="../../ekdoseis/berkeley/berkeley-treis-dialogoi.pdf?v=3" target="_blank" rel="noopener">
             <img src="../../ekdoseis/berkeley/cover.jpg?v=2" alt="Cover: George Berkeley, Three Dialogues between Hylas and Philonous (Greek–English edition)" width="420" height="596" loading="lazy">
           </a>
           <div class="book-info">
@@ -48,28 +48,48 @@
             <p class="book-by">Greek translation &amp; editing: <b>Panagiota Theodoni</b></p>
             <p>Two friends walk in a garden on three mornings and argue whether matter exists outside the mind. Hylas defends matter; Philonous, “the friend of mind”, speaks for Berkeley. The English text of the third edition (1734) and a new Greek translation in facing columns, with an introduction, section titles and a glossary (in Greek).</p>
             <p class="book-actions">
-              <a class="btn-gold" href="../../ekdoseis/berkeley/berkeley-treis-dialogoi.pdf?v=2" target="_blank" rel="noopener">Read online</a>
+              <a class="btn-gold" href="../../ekdoseis/berkeley/berkeley-treis-dialogoi.pdf?v=3" target="_blank" rel="noopener">Read online</a>
               <button type="button" class="btn-line" data-listen="berkeley-audio">Listen online</button>
-              <a class="btn-line" href="../../ekdoseis/berkeley/berkeley-treis-dialogoi.pdf?v=2" download>Download the PDF</a>
+              <a class="btn-line" href="../../ekdoseis/berkeley/berkeley-treis-dialogoi.pdf?v=3" download>Download the PDF</a>
             </p>
-            <!-- Ακρόαση: το αρχείο ήχου είναι στο ekdoseis/berkeley/. Για να το αλλάξεις, άλλαξε το src.
-                 Το πλαίσιο είναι κρυφό (hidden) μέχρι να πατηθεί το κουμπί «Άκουσε». -->
+            <!-- ===== ΑΚΡΟΑΣΗ (λίστα που παίζει το ένα μετά το άλλο) =====
+                 Τα αρχεία ήχου είναι στο ekdoseis/berkeley/akroasi/ (01.mp3, 02.mp3, …).
+                 Για νέο κεφάλαιο: ανέβασε το αρχείο και πρόσθεσε μία γραμμή <li>…</li> στη λίστα,
+                 με το αρχείο στο data-src και τον τίτλο του κεφαλαίου. Η σειρά της λίστας = σειρά αναπαραγωγής. -->
             <div class="book-audio" id="berkeley-audio" hidden>
-              <p class="book-audio-label">Audio (in Greek) · sample excerpt (17′)</p>
-              <audio controls preload="none" src="../../ekdoseis/berkeley/berkeley-akroasi-dokimastiko.mp3"></audio>
+              <p class="book-audio-label">Audio (in Greek) · chapter by chapter (in progress)</p>
+              <audio controls preload="none"></audio>
+              <ol class="playlist">
+                <li><button type="button" data-src="../../ekdoseis/berkeley/akroasi/01.mp3?v=1">Part 1</button> <span class="dur">1:35</span></li>
+              </ol>
             </div>
-            <p class="book-note">Freely distributed in electronic form · PDF, 163 pp. · audio sample</p>
+            <p class="book-note">Freely distributed in electronic form · PDF, 163 pp. · audio in progress</p>
           </div>
         </article>
       </div>
     </div>
   </main>
-  <!-- Κουμπί «Άκουσε»: εμφανίζει τον ήχο και ξεκινά την αναπαραγωγή -->
+  <!-- Ακρόαση: το «Άκουσε online» ανοίγει τη λίστα και παίζει από την αρχή (ή συνεχίζει).
+       Όταν τελειώσει ένα κομμάτι, ξεκινά αυτόματα το επόμενο της λίστας. -->
   <script>
-    document.querySelectorAll('[data-listen]').forEach(function (b) {
-      b.addEventListener('click', function () {
-        var box = document.getElementById(b.dataset.listen), au = box.querySelector('audio');
-        box.hidden = false; au.play(); box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    document.querySelectorAll('[data-listen]').forEach(function (btn) {
+      var box = document.getElementById(btn.dataset.listen);
+      var au = box.querySelector('audio');
+      var items = Array.prototype.slice.call(box.querySelectorAll('.playlist button'));
+      var cur = -1;
+      function play(i) {
+        if (i < 0 || i >= items.length) return;
+        cur = i;
+        au.src = items[i].dataset.src;
+        items.forEach(function (b, k) { b.parentNode.classList.toggle('now', k === i); });
+        au.play();
+      }
+      items.forEach(function (b, k) { b.addEventListener('click', function () { play(k); }); });
+      au.addEventListener('ended', function () { play(cur + 1); });
+      btn.addEventListener('click', function () {
+        box.hidden = false;
+        if (cur < 0) play(0); else au.play();
+        box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       });
     });
   </script>
