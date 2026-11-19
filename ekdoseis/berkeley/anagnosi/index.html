@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Tinos:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Roboto:wght@400;500&display=swap">
-  <link rel="stylesheet" href="../../../assets/style.css?v=20261119a">
+  <link rel="stylesheet" href="../../../assets/style.css?v=20261119b">
   <link rel="icon" href="../../../images/favicon.png?v=20261017g">
 </head>
 <body>
@@ -35,15 +35,25 @@
     </div></section>
 
     <div class="wrap">
+      <!-- Κουτί σχολίων (φόρμα Tally VpPOVa), πάνω και κάτω από το βιβλίο -->
+      <div class="reader-comment">
+        <p data-t="cm">Έχεις διόρθωση ή παρατήρηση; Όσοι συμβάλλουν θα αναγνωριστούν στην τελική έκδοση.</p>
+        <a class="btn-gold" href="https://tally.so/r/VpPOVa" target="_blank" rel="noopener" data-tally-open="VpPOVa" data-tally-layout="modal" data-tally-width="720" data-tally-emoji-animation="none" data-t="cmb">Στείλε σχόλιο</a>
+      </div>
       <!-- Εδώ μπαίνουν οι σελίδες του βιβλίου (κάθε σελίδα ένας καμβάς) -->
       <div class="reader" id="reader" oncontextmenu="return false"></div>
       <p class="reader-status" id="status" data-t="loading">Φόρτωση…</p>
+      <div class="reader-comment">
+        <p data-t="cm">Έχεις διόρθωση ή παρατήρηση; Όσοι συμβάλλουν θα αναγνωριστούν στην τελική έκδοση.</p>
+        <a class="btn-gold" href="https://tally.so/r/VpPOVa" target="_blank" rel="noopener" data-tally-open="VpPOVa" data-tally-layout="modal" data-tally-width="720" data-tally-emoji-animation="none" data-t="cmb">Στείλε σχόλιο</a>
+      </div>
     </div>
   </main>
 
   <footer id="site-footer"></footer>
   <script src="../../../assets/site.js?v=20261117c"></script>
   <script src="../../../assets/pdfjs/pdf.min.js"></script>
+  <script async src="https://tally.so/widgets/embed.js"></script>
   <script>
     // ---- Το αρχείο του βιβλίου (άλλαξε το ?v= όταν ανεβάζεις νέα εκδοχή) ----
     var PDF = 'k-7c3ae1d76078.pdf?v=1';
@@ -54,7 +64,9 @@
         back: '← Publications',
         h1: 'George Berkeley · Three Dialogues',
         note: 'Read online. The text is still under review, so it is not available for download.',
-        loading: 'Loading…'
+        loading: 'Loading…',
+        cm: 'A correction or a remark? Contributors will be acknowledged in the final edition.',
+        cmb: 'Send a comment'
       };
       document.documentElement.lang = 'en';
       document.querySelectorAll('[data-t]').forEach(function (e) { if (EN[e.dataset.t]) e.textContent = EN[e.dataset.t]; });
