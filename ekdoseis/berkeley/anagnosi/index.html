@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Tinos:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Roboto:wght@400;500&display=swap">
-  <link rel="stylesheet" href="../../../assets/style.css?v=20261119b">
+  <link rel="stylesheet" href="../../../assets/style.css?v=20261119c">
   <link rel="icon" href="../../../images/favicon.png?v=20261017g">
 </head>
 <body>
@@ -89,9 +89,47 @@
             c.width = vp.width; c.height = vp.height;
             en.target.appendChild(c);
             page.render({ canvasContext: c.getContext('2d'), viewport: vp });
+            addLinks(page, v1, en.target);
           });
         });
       }, { rootMargin: '800px 0px' });
+      // ---- Σύνδεσμοι του PDF (περιεχόμενα, «↑ Περιεχόμενα», εξωτερικοί σύνδεσμοι) ----
+      // Πάνω από κάθε σελίδα μπαίνουν διάφανα «κουτιά» στη θέση των συνδέσμων του PDF.
+      function goTo(dest) {
+        var p = (typeof dest === 'string') ? pdf.getDestination(dest) : Promise.resolve(dest);
+        p.then(function (d) {
+          if (!d) return;
+          return pdf.getPageIndex(d[0]).then(function (idx) {
+            var div = reader.children[idx];
+            var y = div.getBoundingClientRect().top + window.scrollY - 80;
+            // αν ο σύνδεσμος δείχνει συγκεκριμένο ύψος στη σελίδα (XYZ), πήγαινε εκεί
+            if (d[1] && d[1].name === 'XYZ' && d[3] != null) {
+              var h = div.dataset.ph ? +div.dataset.ph : 595.276;
+              y += (1 - d[3] / h) * div.clientHeight;
+            }
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          });
+        });
+      }
+      function addLinks(page, v1, div) {
+        div.dataset.ph = v1.height / 1;   // ύψος σελίδας σε μονάδες PDF
+        page.getAnnotations().then(function (anns) {
+          anns.forEach(function (a) {
+            if (a.subtype !== 'Link' || (!a.dest && !a.url)) return;
+            var r = v1.convertToViewportRectangle(a.rect);
+            var x = Math.min(r[0], r[2]), y = Math.min(r[1], r[3]);
+            var el = document.createElement('a');
+            el.className = 'reader-link';
+            el.style.left = (x / v1.width * 100) + '%';
+            el.style.top = (y / v1.height * 100) + '%';
+            el.style.width = (Math.abs(r[2] - r[0]) / v1.width * 100) + '%';
+            el.style.height = (Math.abs(r[3] - r[1]) / v1.height * 100) + '%';
+            if (a.url) { el.href = a.url; el.target = '_blank'; el.rel = 'noopener'; }
+            else { el.href = '#'; el.addEventListener('click', function (e) { e.preventDefault(); goTo(a.dest); }); }
+            div.appendChild(el);
+          });
+        });
+      }
       for (var i = 1; i <= pdf.numPages; i++) {
         var d = document.createElement('div');
         d.className = 'reader-page'; d.dataset.n = i;

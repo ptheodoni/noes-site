@@ -489,3 +489,7 @@ button.btn-line { background: none; cursor: pointer; }
 /* Κουτί σχολίων στη σελίδα ανάγνωσης */
 .reader-comment { max-width: 760px; margin: 24px auto; display: flex; flex-wrap: wrap; gap: 14px 20px; align-items: center; justify-content: space-between; background: var(--navy-soft); border-radius: 12px; padding: 14px 18px; }
 .reader-comment p { margin: 0; flex: 1 1 320px; }
+/* Διάφανοι σύνδεσμοι πάνω στις σελίδες (περιεχόμενα κ.λπ.) */
+.reader-page { position: relative; }
+.reader-link { position: absolute; display: block; border-radius: 3px; }
+.reader-link:hover { background: rgba(236, 202, 99, .22); }
