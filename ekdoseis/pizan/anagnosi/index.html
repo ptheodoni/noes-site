@@ -1,0 +1,141 @@
+<!doctype html>
+<!--
+  =====================================================================
+  ΣΕΛΙΔΑ: Ανάγνωση online — Christine de Pizan, Το Βιβλίο της Πόλης των Κυριών (σε εξέλιξη)
+  Αρχείο: ekdoseis/pizan/anagnosi/index.html
+
+  Το βιβλίο εμφανίζεται σελίδα-σελίδα (με το pdf.js, assets/pdfjs/), χωρίς κουμπί λήψης
+  ή εκτύπωσης, γιατί η μετάφραση είναι σε εξέλιξη.
+  - Για νέα εκδοχή του PDF: αντικατέστησε το αρχείο k-...pdf σε αυτόν τον φάκελο
+    (ίδιο όνομα) και άλλαξε το ?v= στη μεταβλητή PDF πιο κάτω.
+  - Όταν αποφασίσεις να επιτρέψεις ξανά τη λήψη, το λέμε και επαναφέρουμε το κουμπί.
+  - Με ?lang=en η σελίδα δείχνει τα κείμενά της στα αγγλικά (από την αγγλική σελίδα Publications).
+  =====================================================================
+-->
+<html lang="el" data-root="../../../" data-page="ekdoseis">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ανάγνωση: Christine de Pizan, Η Πόλη των Κυριών — Νόες</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Tinos:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Roboto:wght@400;500&display=swap">
+  <link rel="stylesheet" href="../../../assets/style.css?v=20261119d">
+  <link rel="icon" href="../../../images/favicon.png?v=20261017g">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main>
+    <section class="page-head bleed"><div class="wrap">
+      <p class="eyebrow"><a href="../../#pizan" data-t="back" style="color:inherit">← Εκδόσεις</a></p>
+      <h1 data-t="h1">Christine de Pizan · Το Βιβλίο της Πόλης των Κυριών</h1>
+      <p class="lead" data-t="note">Ανάγνωση online. Η μετάφραση είναι σε εξέλιξη (Βιβλίο Πρώτο, κεφ. 1–4) και ανανεώνεται καθώς προχωρά· γι' αυτό δεν διατίθεται για λήψη.</p>
+    </div></section>
+
+    <div class="wrap">
+      <!-- Κουτί σχολίων (φόρμα Tally o9RPYM), πάνω και κάτω από το βιβλίο -->
+      <div class="reader-comment">
+        <p data-t="cm">Έχεις διόρθωση ή παρατήρηση; Όσοι συμβάλλουν θα αναγνωριστούν στην τελική έκδοση.</p>
+        <a class="btn-gold" href="https://tally.so/r/o9RPYM" target="_blank" rel="noopener" data-tally-open="o9RPYM" data-tally-layout="modal" data-tally-width="720" data-tally-emoji-animation="none" data-t="cmb">Στείλε σχόλιο</a>
+      </div>
+      <!-- Εδώ μπαίνουν οι σελίδες του βιβλίου (κάθε σελίδα ένας καμβάς) -->
+      <div class="reader" id="reader" oncontextmenu="return false"></div>
+      <p class="reader-status" id="status" data-t="loading">Φόρτωση…</p>
+      <div class="reader-comment">
+        <p data-t="cm">Έχεις διόρθωση ή παρατήρηση; Όσοι συμβάλλουν θα αναγνωριστούν στην τελική έκδοση.</p>
+        <a class="btn-gold" href="https://tally.so/r/o9RPYM" target="_blank" rel="noopener" data-tally-open="o9RPYM" data-tally-layout="modal" data-tally-width="720" data-tally-emoji-animation="none" data-t="cmb">Στείλε σχόλιο</a>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script src="../../../assets/site.js?v=20261117c"></script>
+  <script src="../../../assets/pdfjs/pdf.min.js"></script>
+  <script async src="https://tally.so/widgets/embed.js"></script>
+  <script>
+    // ---- Το αρχείο του βιβλίου (άλλαξε το ?v= όταν ανεβάζεις νέα εκδοχή) ----
+    var PDF = 'k-35a15fdfa776.pdf?v=1';
+
+    // ---- Αγγλικά κείμενα όταν η διεύθυνση έχει ?lang=en ----
+    if (/lang=en/.test(location.search)) {
+      var EN = {
+        back: '← Publications',
+        h1: 'Christine de Pizan · The Book of the City of Ladies',
+        note: 'Read online. The translation is in progress (Book One, ch. 1–4) and is updated as it advances, so it is not available for download.',
+        loading: 'Loading…',
+        cm: 'A correction or a remark? Contributors will be acknowledged in the final edition.',
+        cmb: 'Send a comment'
+      };
+      document.documentElement.lang = 'en';
+      document.querySelectorAll('[data-t]').forEach(function (e) { if (EN[e.dataset.t]) e.textContent = EN[e.dataset.t]; });
+      document.querySelector('[data-t="back"]').href = '../../../en/publications/#pizan';
+    }
+
+    // ---- Εμφάνιση σελίδων: κάθε σελίδα σχεδιάζεται μόνο όταν πλησιάζει στην οθόνη ----
+    pdfjsLib.GlobalWorkerOptions.workerSrc = '../../../assets/pdfjs/pdf.worker.min.js';
+    var reader = document.getElementById('reader'), statusEl = document.getElementById('status');
+    pdfjsLib.getDocument({ url: PDF, disableAutoFetch: true }).promise.then(function (pdf) {
+      statusEl.remove();
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (!en.isIntersecting || en.target.dataset.done) return;
+          en.target.dataset.done = 1; io.unobserve(en.target);
+          pdf.getPage(+en.target.dataset.n).then(function (page) {
+            var w = en.target.clientWidth, v1 = page.getViewport({ scale: 1 });
+            var scale = w / v1.width * Math.min(window.devicePixelRatio || 1, 2);
+            var vp = page.getViewport({ scale: scale }), c = document.createElement('canvas');
+            c.width = vp.width; c.height = vp.height;
+            en.target.appendChild(c);
+            page.render({ canvasContext: c.getContext('2d'), viewport: vp });
+            addLinks(page, v1, en.target);
+          });
+        });
+      }, { rootMargin: '800px 0px' });
+      // ---- Σύνδεσμοι του PDF (περιεχόμενα, «↑ Περιεχόμενα», εξωτερικοί σύνδεσμοι) ----
+      // Πάνω από κάθε σελίδα μπαίνουν διάφανα «κουτιά» στη θέση των συνδέσμων του PDF.
+      function goTo(dest) {
+        var p = (typeof dest === 'string') ? pdf.getDestination(dest) : Promise.resolve(dest);
+        p.then(function (d) {
+          if (!d) return;
+          return pdf.getPageIndex(d[0]).then(function (idx) {
+            var div = reader.children[idx];
+            var y = div.getBoundingClientRect().top + window.scrollY - 80;
+            // αν ο σύνδεσμος δείχνει συγκεκριμένο ύψος στη σελίδα (XYZ), πήγαινε εκεί
+            if (d[1] && d[1].name === 'XYZ' && d[3] != null) {
+              var h = div.dataset.ph ? +div.dataset.ph : 595.276;
+              y += (1 - d[3] / h) * div.clientHeight;
+            }
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          });
+        });
+      }
+      function addLinks(page, v1, div) {
+        div.dataset.ph = v1.height / 1;   // ύψος σελίδας σε μονάδες PDF
+        page.getAnnotations().then(function (anns) {
+          anns.forEach(function (a) {
+            if (a.subtype !== 'Link' || (!a.dest && !a.url)) return;
+            var r = v1.convertToViewportRectangle(a.rect);
+            var x = Math.min(r[0], r[2]), y = Math.min(r[1], r[3]);
+            var el = document.createElement('a');
+            el.className = 'reader-link';
+            el.style.left = (x / v1.width * 100) + '%';
+            el.style.top = (y / v1.height * 100) + '%';
+            el.style.width = (Math.abs(r[2] - r[0]) / v1.width * 100) + '%';
+            el.style.height = (Math.abs(r[3] - r[1]) / v1.height * 100) + '%';
+            if (a.url) { el.href = a.url; el.target = '_blank'; el.rel = 'noopener'; }
+            else { el.href = '#'; el.addEventListener('click', function (e) { e.preventDefault(); goTo(a.dest); }); }
+            div.appendChild(el);
+          });
+        });
+      }
+      for (var i = 1; i <= pdf.numPages; i++) {
+        var d = document.createElement('div');
+        d.className = 'reader-page'; d.dataset.n = i;
+        reader.appendChild(d); io.observe(d);
+      }
+    }).catch(function (err) { console.error(err); statusEl.textContent = 'Σφάλμα φόρτωσης / Loading error'; });
+  </script>
+</body>
+</html>

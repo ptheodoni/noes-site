@@ -493,3 +493,11 @@ button.btn-line { background: none; cursor: pointer; }
 .reader-page { position: relative; }
 .reader-link { position: absolute; display: block; border-radius: 3px; }
 .reader-link:hover { background: rgba(236, 202, 99, .22); }
+
+/* ===== Εκδόσεις: βιβλία δίπλα-δίπλα (στο κινητό το ένα κάτω από το άλλο) =====
+   Κάθε κάρτα: εξώφυλλο πάνω στο κέντρο, στοιχεία από κάτω. */
+.books { max-width: 1120px; display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 28px; align-items: start; }
+.books .book { grid-template-columns: 1fr; margin: 8px 0 32px; }
+.books .book-cover { width: min(230px, 70%); margin: 0 auto; }
+.book-series { font-size: .92rem; color: var(--muted); font-style: italic; }
+.reader-page.pz { aspect-ratio: 419.5 / 595.3; }
