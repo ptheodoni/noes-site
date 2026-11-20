@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Tinos:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Roboto:wght@400;500&display=swap">
-  <link rel="stylesheet" href="../../../assets/style.css?v=20261119d">
+  <link rel="stylesheet" href="../../../assets/style.css?v=20261120a">
   <link rel="icon" href="../../../images/favicon.png?v=20261017g">
 </head>
 <body>
@@ -137,5 +137,19 @@
       }
     }).catch(function (err) { console.error(err); statusEl.textContent = 'Σφάλμα φόρτωσης / Loading error'; });
   </script>
+  <!-- ===== ΑΚΡΟΑΣΗ στη σελίδα ανάγνωσης =====
+       Μία γραμμή ανά κεφάλαιο: τίτλος, αρχείο ήχου, σελίδα του PDF (από 1) και θέση του τίτλου (σε ποσοστό της σελίδας).
+       Για νέο κεφάλαιο πρόσθεσε μία γραμμή (ή πες το στο Claude να βρει τη θέση). -->
+  <script>
+    window.READER_TRACKS = [
+      { title: 'Το πρωινό στον κήπο', src: '../akroasi/01.mp3?v=3', page: 9, x: 11.29, y: 24.83, h: 1.97 },
+      { title: '«Η πιο εξωφρενική γνώμη»', src: '../akroasi/02.mp3?v=2', page: 10, x: 12.39, y: 25.43, h: 1.97 },
+      { title: 'Το κριτήριο της συζήτησης', src: '../akroasi/03.mp3?v=1', page: 11, x: 11.29, y: 50.08, h: 1.97 },
+      { title: 'Τι είναι σκεπτικιστής', src: '../akroasi/04.mp3?v=1', page: 12, x: 11.29, y: 27.95, h: 1.97 },
+      { title: 'Νέος ορισμός: αρνείται την πραγματικότητα των αισθητών', src: '../akroasi/05.mp3?v=1', page: 13, x: 11.29, y: 18.3, h: 1.97 },
+      { title: 'Άμεσα και έμμεσα αισθητά: τα γράμματα ενός βιβλίου', src: '../akroasi/06.mp3?v=2', page: 13, x: 9.94, y: 82.1, h: 1.97 }
+    ];
+  </script>
+  <script src="../../../assets/reader-audio.js?v=2"></script>
 </body>
 </html>

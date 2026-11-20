@@ -501,3 +501,14 @@ button.btn-line { background: none; cursor: pointer; }
 .books .book-cover { width: min(230px, 70%); margin: 0 auto; }
 .book-series { font-size: .92rem; color: var(--muted); font-style: italic; }
 .reader-page.pz { aspect-ratio: 419.5 / 595.3; }
+
+/* ===== Ακρόαση στη σελίδα ανάγνωσης ===== */
+.reader-play { position: absolute; transform: translateY(-50%); width: 30px; height: 30px; border-radius: 50%; border: 0; background: var(--gold-bright); color: var(--navy-deep); font-size: 12px; line-height: 30px; padding: 0 0 0 2px; cursor: pointer; box-shadow: 0 2px 8px rgba(18, 38, 79, .25); z-index: 2; }
+.reader-play:hover { background: var(--navy-deep); color: #fff; }
+.reader-player { position: fixed; left: 50%; bottom: 14px; transform: translateX(-50%); width: min(760px, calc(100vw - 24px)); display: flex; align-items: center; gap: 12px; background: var(--navy-deep); color: #fff; border-radius: 14px; padding: 8px 10px 8px 16px; box-shadow: 0 10px 30px rgba(0, 0, 0, .3); z-index: 50; }
+.reader-player[hidden] { display: none; }
+.reader-player .rp-title { font: 600 14px/1.3 var(--ui); flex: 0 1 34%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.reader-player audio { flex: 1 1 auto; min-width: 0; height: 40px; }
+.reader-player .rp-close { background: none; border: 0; color: #fff; font-size: 24px; cursor: pointer; padding: 0 4px; }
+.reader-hl { position: absolute; background: rgba(236, 202, 99, .35); border-radius: 2px; pointer-events: none; mix-blend-mode: multiply; }
+@media (max-width: 600px) { .reader-player { flex-wrap: wrap; } .reader-player .rp-title { flex-basis: calc(100% - 40px); } .reader-player audio { flex-basis: 100%; } }

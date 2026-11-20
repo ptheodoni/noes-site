@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Tinos:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Roboto:wght@400;500&display=swap">
-  <link rel="stylesheet" href="../../../assets/style.css?v=20261119d">
+  <link rel="stylesheet" href="../../../assets/style.css?v=20261120a">
   <link rel="icon" href="../../../images/favicon.png?v=20261017g">
 </head>
 <body>
@@ -137,5 +137,14 @@
       }
     }).catch(function (err) { console.error(err); statusEl.textContent = 'Σφάλμα φόρτωσης / Loading error'; });
   </script>
+  <!-- ===== ΑΚΡΟΑΣΗ στη σελίδα ανάγνωσης =====
+       Μία γραμμή ανά κεφάλαιο: τίτλος, αρχείο ήχου, σελίδα του PDF (από 1) και θέση του τίτλου (σε ποσοστό της σελίδας).
+       Για νέο κεφάλαιο πρόσθεσε μία γραμμή (ή πες το στο Claude να βρει τη θέση). -->
+  <script>
+    window.READER_TRACKS = [
+      { title: 'Η αφορμή: το βιβλίο του Ματέολους', src: '../akroasi/01.mp3?v=1', page: 7, x: 25.66, y: 20.78, h: 2.52 }
+    ];
+  </script>
+  <script src="../../../assets/reader-audio.js?v=2"></script>
 </body>
 </html>
