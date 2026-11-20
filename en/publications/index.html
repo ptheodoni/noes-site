@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Tinos:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Roboto:wght@400;500&display=swap">
-  <link rel="stylesheet" href="../../assets/style.css?v=20261119d">
+  <link rel="stylesheet" href="../../assets/style.css?v=20261120b">
   <link rel="icon" href="../../images/favicon.png?v=20261017g">
 </head>
 <body>
@@ -105,12 +105,14 @@
   </main>
   <!-- Ακρόαση: το «Άκουσε online» ανοίγει τη λίστα και παίζει από την αρχή (ή συνεχίζει).
        Όταν τελειώσει ένα κομμάτι, ξεκινά αυτόματα το επόμενο της λίστας. -->
+  <script src="../../assets/speed.js?v=1"></script>
   <script>
     document.querySelectorAll('[data-listen]').forEach(function (btn) {
       var box = document.getElementById(btn.dataset.listen);
       var au = box.querySelector('audio');
       var items = Array.prototype.slice.call(box.querySelectorAll('.playlist button'));
       var cur = -1;
+      noesSpeed(au, au.parentNode.insertBefore(document.createElement('div'), au.nextSibling));   // ταχύτητα
       function play(i) {
         if (i < 0 || i >= items.length) return;
         cur = i;

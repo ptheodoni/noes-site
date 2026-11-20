@@ -512,3 +512,12 @@ button.btn-line { background: none; cursor: pointer; }
 .reader-player .rp-close { background: none; border: 0; color: #fff; font-size: 24px; cursor: pointer; padding: 0 4px; }
 .reader-hl { position: absolute; background: rgba(236, 202, 99, .35); border-radius: 2px; pointer-events: none; mix-blend-mode: multiply; }
 @media (max-width: 600px) { .reader-player { flex-wrap: wrap; } .reader-player .rp-title { flex-basis: calc(100% - 40px); } .reader-player audio { flex-basis: 100%; } }
+
+/* Κουμπιά ταχύτητας ακρόασης */
+.speed { display: inline-flex; gap: 2px; background: rgba(18, 38, 79, .08); border-radius: 999px; padding: 3px; margin-top: 8px; }
+.speed button { border: 0; background: none; font: 600 13px/1 var(--ui); color: var(--navy-deep); padding: 6px 9px; border-radius: 999px; cursor: pointer; }
+.speed button.on { background: var(--navy-deep); color: #fff; }
+.reader-player .speed { background: rgba(255, 255, 255, .12); margin: 0; flex: 0 0 auto; }
+.reader-player .speed button { color: #fff; padding: 6px 7px; }
+.reader-player .speed button.on { background: var(--gold-bright); color: var(--navy-deep); }
+@media (max-width: 600px) { .reader-player .speed { order: 3; } }

@@ -21,6 +21,7 @@
     '<button type="button" class="rp-close" aria-label="' + (EN ? 'Close' : 'Κλείσιμο') + '">×</button>';
   document.body.appendChild(bar);
   var au = bar.querySelector('audio'), titleEl = bar.querySelector('.rp-title');
+  if (window.noesSpeed) noesSpeed(au, bar.insertBefore(document.createElement('div'), bar.querySelector('.rp-close'))).parentNode.className = 'rp-speed';
   bar.querySelector('.rp-close').onclick = function () { au.pause(); bar.hidden = true; clearHL(); };
 
   var cur = -1, sync = null, hl = [], lastS = -1;
