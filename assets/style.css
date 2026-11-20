@@ -513,11 +513,16 @@ button.btn-line { background: none; cursor: pointer; }
 .reader-hl { position: absolute; background: rgba(236, 202, 99, .35); border-radius: 2px; pointer-events: none; mix-blend-mode: multiply; }
 @media (max-width: 600px) { .reader-player { flex-wrap: wrap; } .reader-player .rp-title { flex-basis: calc(100% - 40px); } .reader-player audio { flex-basis: 100%; } }
 
-/* Κουμπιά ταχύτητας ακρόασης */
-.speed { display: inline-flex; gap: 2px; background: rgba(18, 38, 79, .08); border-radius: 999px; padding: 3px; margin-top: 8px; }
-.speed button { border: 0; background: none; font: 600 13px/1 var(--ui); color: var(--navy-deep); padding: 6px 9px; border-radius: 999px; cursor: pointer; }
-.speed button.on { background: var(--navy-deep); color: #fff; }
-.reader-player .speed { background: rgba(255, 255, 255, .12); margin: 0; flex: 0 0 auto; }
-.reader-player .speed button { color: #fff; padding: 6px 7px; }
-.reader-player .speed button.on { background: var(--gold-bright); color: var(--navy-deep); }
-@media (max-width: 600px) { .reader-player .speed { order: 3; } }
+/* Ταχύτητα ακρόασης: ένα κουμπί + μικρό μενού που ανοίγει από πάνω */
+.speed { position: relative; display: inline-block; margin-top: 8px; }
+.speed-btn { border: 1.5px solid var(--navy-deep); background: #fff; color: var(--navy-deep); font: 600 13px/1 var(--ui); padding: 7px 11px; border-radius: 999px; cursor: pointer; min-width: 52px; }
+.speed-btn:hover { background: var(--navy-deep); color: #fff; }
+.speed-menu { position: absolute; bottom: calc(100% + 6px); left: 0; display: flex; flex-direction: column; background: #fff; border-radius: 10px; box-shadow: 0 8px 24px rgba(18, 38, 79, .25); padding: 4px; z-index: 60; }
+.speed-menu[hidden] { display: none; }
+.speed-menu button { border: 0; background: none; font: 600 13px/1 var(--ui); color: var(--navy-deep); padding: 8px 14px; border-radius: 6px; cursor: pointer; text-align: left; white-space: nowrap; }
+.speed-menu button:hover { background: rgba(18, 38, 79, .08); }
+.speed-menu button.on { background: var(--navy-deep); color: #fff; }
+.reader-player .speed { margin: 0; flex: 0 0 auto; }
+.reader-player .speed-btn { background: none; border-color: rgba(255, 255, 255, .6); color: #fff; }
+.reader-player .speed-btn:hover { background: var(--gold-bright); border-color: var(--gold-bright); color: var(--navy-deep); }
+.reader-player .speed-menu { left: auto; right: 0; }
